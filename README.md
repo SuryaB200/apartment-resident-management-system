@@ -6,23 +6,9 @@
 [![Relational Engine](https://img.shields.io/badge/Normalization-Strict_3NF-indigo.svg)](#)
 [![Tests Passed](https://img.shields.io/badge/Tests-12%2F12_Passed-success.svg)](#)
 
----
 
-## Academic Project Credentials
 
-- **Institution:** SRM Institute of Science and Technology, Tiruchirappalli
-- **Department:** Artificial Intelligence
-- **Degree:** B.Tech (Artificial Intelligence)
-- **Academic Year:** 2024–2028
-- **Course:** Database Management Systems (DBMS) Capstone Project
-- **Faculty Guide:** Dr. S. P. Ramya
 
-### Student Development Team
-1. **Surya B** — `RA2411047050042`
-2. **Rohan raj** — `RA2411047050010`
-3. **Saminathan M** — `RA2411047050055`
-
----
 
 ## 1. Executive Summary & Problem Formulation
 
