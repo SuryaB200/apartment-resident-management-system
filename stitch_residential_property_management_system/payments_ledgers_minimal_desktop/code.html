@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#dae2fd","surface-dim":"#d2d9f4","on-surface":"#131b2e","tertiary-container":"#00577e","on-primary-fixed":"#100069","tertiary":"#003f5c","inverse-on-surface":"#eef0ff","tertiary-fixed":"#c9e6ff","on-surface-variant":"#464554","outline":"#777586","inverse-surface":"#283044","outline-variant":"#c7c4d7","error":"#ba1a1a","secondary-fixed-dim":"#b9c7e0","on-secondary":"#ffffff","surface-container-high":"#e2e7ff","surface-container":"#eaedff","on-tertiary":"#ffffff","primary-fixed-dim":"#c3c0ff","primary":"#2a14b4","on-secondary-container":"#57657b","on-secondary-fixed-variant":"#3a485c","on-tertiary-container":"#84cdff","inverse-primary":"#c3c0ff","primary-fixed":"#e3dfff","surface-variant":"#dae2fd","on-background":"#131b2e","on-secondary-fixed":"#0d1c2f","surface-container-low":"#f2f3ff","tertiary-fixed-dim":"#89ceff","on-error-container":"#93000a","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface":"#faf8ff","surface-tint":"#5148d7","on-tertiary-fixed":"#001e2f","on-primary-fixed-variant":"#372abf","on-tertiary-fixed-variant":"#004c6e","background":"#faf8ff","primary-container":"#4338ca","surface-bright":"#faf8ff","on-error":"#ffffff","on-primary-container":"#c1beff","secondary":"#515f74","on-primary":"#ffffff","secondary-container":"#d5e3fd","secondary-fixed":"#d5e3fd"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","margin-lg":"3rem","gutter-sm":"1rem","space-lg":"1.5rem","gutter":"1.5rem","gutter-lg":"2rem","space-xl":"2.5rem","margin":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"headline-lg":["Inter"],"headline-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"tabular-metric":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"display-hero-mobile":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-metric":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest flex-shrink-0"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Tenancy OS</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CivicQuarters</span></div></div><div class="flex-1 px-space-md py-space-md space-y-space-lg"><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="flats-and-buildings" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-body-md text-body-md">Flats &amp; Buildings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="residents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md">Residents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="occupancy-history" href="#"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md">Occupancy History</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="maintenance-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Maintenance Billing</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="payments-and-ledgers" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Payments &amp; Ledgers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="service-tickets" href="#"><span class="material-symbols-outlined text-[20px]">handyman</span><span class="font-body-md text-body-md">Service Tickets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="visitors-and-gate-logs" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Visitors &amp; Gate Logs</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Facilities</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="amenities-and-bookings" href="#"><span class="material-symbols-outlined text-[20px]">pool</span><span class="font-body-md text-body-md">Amenities &amp; Bookings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="parking-allocations" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-body-md text-body-md">Parking Allocations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="staff-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Staff Management</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports-and-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Reports &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-md border-t border-surface-container-high bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant text-label-md"><span class="font-label-md">v2.4.1 Civic Core</span><span class="w-2 h-2 rounded-full bg-primary inline-block"></span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-outline text-[18px]">location_city</span><span class="font-label-md text-label-md text-on-surface font-semibold">Greenwood Crest</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-72"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search units, residents, tickets..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-space-xs rounded-full self-end leading-tight mt-0.5">Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Quick Notice -->
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Operations &amp; Finance</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Payments &amp; Ledgers</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Gateway sync updated 4m ago</span>
+</div>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Payments &amp; Ledgers</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Reconcile incoming resident society dues, amenity booking receipts, and payment gateway transactions.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-space-xs shadow-sm hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Download Reconciliation</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Record Manual Payment</span>
+</button>
+</div>
+</div>
+<!-- 4 Summary KPI Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Total Transactions -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Total Transactions (Oct)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface mb-space-xs">₹16.42 Lakh</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">218</span>
+<span>successful receipts</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm">
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span>Target ₹18.00L</span>
+<span class="font-semibold text-primary">91.2%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 91.2%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Gateway Settlement -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Gateway Settlement</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+</div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface mb-space-xs">₹14.80 Lakh</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Auto-cleared to Escrow #8821</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Next Settlement Batch</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Today, 18:00 IST</span>
+</div>
+</div>
+<!-- Card 3: Payment Modes Split -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Payment Modes Split</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">pie_chart</span>
+</div>
+</div>
+<!-- Segmented bar visual -->
+<div class="h-2 w-full flex rounded-full overflow-hidden my-space-sm">
+<div class="bg-primary h-full" style="width: 64%;" title="UPI 64%"></div>
+<div class="bg-secondary h-full ml-0.5" style="width: 24%;" title="NEFT/IMPS 24%"></div>
+<div class="bg-outline-variant h-full ml-0.5" style="width: 12%;" title="Cards 12%"></div>
+</div>
+<div class="space-y-1 mt-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span>UPI Autopay &amp; QR</span>
+<span class="font-semibold text-on-surface">64%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>NEFT / RTGS</span>
+<span class="font-semibold text-on-surface">24%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-outline-variant inline-block"></span>Cards / Direct PG</span>
+<span class="font-semibold text-on-surface">12%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Unreconciled / Attention -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Unreconciled / Failed</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">3 Action Items</span>
+</div>
+<div class="font-tabular-metric text-tabular-metric text-error mb-space-xs">₹18,400</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+          2 mismatched UTR references, 1 gateway reversal pending bank ACK.
+        </div>
+</div>
+<div class="mt-space-md pt-space-sm">
+<button class="w-full py-1.5 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-variant transition-colors flex items-center justify-center gap-1">
+<span>Resolve In Queue</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Filtering, Tabs & Search Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm mb-space-md p-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<button class="px-space-md py-1.5 rounded-lg bg-secondary-container text-on-surface font-label-md text-label-md font-semibold whitespace-nowrap">
+        All Transactions (218)
+      </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors">
+        UPI / QR (140)
+      </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors">
+        Net Banking / NEFT (52)
+      </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors">
+        Card &amp; Gateway (26)
+      </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1">
+<span>Pending Settlement</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-high text-[10px] flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+<!-- Search & Date Selection Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs px-3 py-1.5 bg-surface-container-low rounded-lg text-on-surface-variant w-full sm:w-64">
+<span class="material-symbols-outlined text-[18px] text-outline">search</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Txn ID, Flat, or UTR..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs px-3 py-1.5 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-outline">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">October 2024</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="More Filters">
+<span class="material-symbols-outlined text-[20px] text-outline">tune</span>
+</button>
+</div>
+</div>
+<!-- Primary Tabular Ledger Panel -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md w-10">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-space-sm px-space-md">Transaction ID</th>
+<th class="py-space-sm px-space-md">Timestamp</th>
+<th class="py-space-sm px-space-md">Flat &amp; Resident</th>
+<th class="py-space-sm px-space-md">Category</th>
+<th class="py-space-sm px-space-md">Payment Mode</th>
+<th class="py-space-sm px-space-md text-right">Amount</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-md text-body-md font-semibold text-primary">#TXN-9021</div>
+<div class="font-label-sm text-label-sm text-outline">UTR: 429188029103</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">24 Oct, 14:32</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Instant Webhook</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-semibold text-[11px]">
+                  AK
+                </div>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Arjun Kapoor</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tower B • Flat 402</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Maintenance Dues
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_2</span>
+<span class="font-body-sm text-body-sm text-on-surface">UPI / PhonePe</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹7,850</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Reconciled
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 text-primary hover:bg-surface-container rounded font-label-md text-label-md font-medium">Receipt</button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-md text-body-md font-semibold text-primary">#TXN-9020</div>
+<div class="font-label-sm text-label-sm text-outline">NEFT: HDFC89012389</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">24 Oct, 11:15</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Bank Feed</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-semibold text-[11px]">
+                  SM
+                </div>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Sunita Mehta</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tower A • Flat 1104</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Maintenance Dues
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">account_balance</span>
+<span class="font-body-sm text-body-sm text-on-surface">HDFC NEFT</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹9,200</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Successful
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 text-primary hover:bg-surface-container rounded font-label-md text-label-md font-medium">Receipt</button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-md text-body-md font-semibold text-primary">#TXN-9019</div>
+<div class="font-label-sm text-label-sm text-outline">PG_ORD: rzp_981aA7</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">23 Oct, 19:40</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Resident App</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-semibold text-[11px]">
+                  RV
+                </div>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Rohan Verma</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tower C • Flat 201</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Amenity Pass (Clubhouse)
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">credit_card</span>
+<span class="font-body-sm text-body-sm text-on-surface">Razorpay PG</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹2,500</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Reconciled
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 text-primary hover:bg-surface-container rounded font-label-md text-label-md font-medium">Receipt</button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-md text-body-md font-semibold text-primary">#TXN-9018</div>
+<div class="font-label-sm text-label-sm text-outline">REF: EV-CHG-9940</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">23 Oct, 08:20</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">IoT Station Meter</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-semibold text-[11px]">
+                  DL
+                </div>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Devika Lal</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tower B • Flat 803</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                EV Charging Slot #4
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_2</span>
+<span class="font-body-sm text-body-sm text-on-surface">UPI Autopay</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹620</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Successful
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 text-primary hover:bg-surface-container rounded font-label-md text-label-md font-medium">Receipt</button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Processing Item -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-md text-body-md font-semibold text-primary">#TXN-9017</div>
+<div class="font-label-sm text-label-sm text-outline">IMPS: 38810291001</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">22 Oct, 17:05</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Manual Cheque/Transfer</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-semibold text-[11px]">
+                  KN
+                </div>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Karthik Nambiar</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tower A • Flat 501</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Move-in Deposit
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">account_balance</span>
+<span class="font-body-sm text-body-sm text-on-surface">ICICI Direct Bank</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹25,000</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                Processing
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 text-primary hover:bg-surface-container rounded font-label-md text-label-md font-medium">Verify</button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<input class="rounded accent-primary w-3.5 h-3.5 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-md text-body-md font-semibold text-primary">#TXN-9016</div>
+<div class="font-label-sm text-label-sm text-outline">UTR: 429188017721</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">22 Oct, 09:12</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Instant Webhook</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-semibold text-[11px]">
+                  PR
+                </div>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Pooja Rao</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tower D • Flat 304</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Maintenance Dues
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_2</span>
+<span class="font-body-sm text-body-sm text-on-surface">UPI / GPay</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹7,850</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Reconciled
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 text-primary hover:bg-surface-container rounded font-label-md text-label-md font-medium">Receipt</button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Pagination Strip -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+        Showing <span class="font-semibold text-on-surface">1–6</span> of <span class="font-semibold text-on-surface">218</span> recorded transactions
+      </div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors">
+          3
+        </button>
+<span class="px-1 text-outline font-label-md text-label-md">...</span>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors">
+          37
+        </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Real-time Webhook Clean Info Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">sync_alt</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Automated Real-Time Webhook Reconciliation</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Active integration with ICICI Bank Virtual Accounts and NPCI UPI auto-debit infrastructure. Transactions clear within ~2.8 seconds.
+        </p>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-space-sm flex-shrink-0">
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+        Webhook Health: 99.98%
+      </span>
+<button class="px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors">
+        Gateway Logs
+      </button>
+</div>
+</div>
+</div></main></div></body></html>

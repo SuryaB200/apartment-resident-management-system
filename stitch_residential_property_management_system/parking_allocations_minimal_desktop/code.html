@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#dae2fd","surface-dim":"#d2d9f4","on-surface":"#131b2e","tertiary-container":"#00577e","on-primary-fixed":"#100069","tertiary":"#003f5c","inverse-on-surface":"#eef0ff","tertiary-fixed":"#c9e6ff","on-surface-variant":"#464554","outline":"#777586","inverse-surface":"#283044","outline-variant":"#c7c4d7","error":"#ba1a1a","secondary-fixed-dim":"#b9c7e0","on-secondary":"#ffffff","surface-container-high":"#e2e7ff","surface-container":"#eaedff","on-tertiary":"#ffffff","primary-fixed-dim":"#c3c0ff","primary":"#2a14b4","on-secondary-container":"#57657b","on-secondary-fixed-variant":"#3a485c","on-tertiary-container":"#84cdff","inverse-primary":"#c3c0ff","primary-fixed":"#e3dfff","surface-variant":"#dae2fd","on-background":"#131b2e","on-secondary-fixed":"#0d1c2f","surface-container-low":"#f2f3ff","tertiary-fixed-dim":"#89ceff","on-error-container":"#93000a","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface":"#faf8ff","surface-tint":"#5148d7","on-tertiary-fixed":"#001e2f","on-primary-fixed-variant":"#372abf","on-tertiary-fixed-variant":"#004c6e","background":"#faf8ff","primary-container":"#4338ca","surface-bright":"#faf8ff","on-error":"#ffffff","on-primary-container":"#c1beff","secondary":"#515f74","on-primary":"#ffffff","secondary-container":"#d5e3fd","secondary-fixed":"#d5e3fd"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","margin-lg":"3rem","gutter-sm":"1rem","space-lg":"1.5rem","gutter":"1.5rem","gutter-lg":"2rem","space-xl":"2.5rem","margin":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"headline-lg":["Inter"],"headline-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"tabular-metric":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"display-hero-mobile":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-metric":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest flex-shrink-0"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Tenancy OS</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CivicQuarters</span></div></div><div class="flex-1 px-space-md py-space-md space-y-space-lg"><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="flats-and-buildings" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-body-md text-body-md">Flats &amp; Buildings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="residents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md">Residents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="occupancy-history" href="#"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md">Occupancy History</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="maintenance-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Maintenance Billing</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="payments-and-ledgers" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Payments &amp; Ledgers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="service-tickets" href="#"><span class="material-symbols-outlined text-[20px]">handyman</span><span class="font-body-md text-body-md">Service Tickets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="visitors-and-gate-logs" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Visitors &amp; Gate Logs</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Facilities</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="amenities-and-bookings" href="#"><span class="material-symbols-outlined text-[20px]">pool</span><span class="font-body-md text-body-md">Amenities &amp; Bookings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="parking-allocations" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-body-md text-body-md">Parking Allocations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="staff-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Staff Management</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports-and-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Reports &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-md border-t border-surface-container-high bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant text-label-md"><span class="font-label-md">v2.4.1 Civic Core</span><span class="w-2 h-2 rounded-full bg-primary inline-block"></span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-outline text-[18px]">location_city</span><span class="font-label-md text-label-md text-on-surface font-semibold">Greenwood Crest</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-72"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search units, residents, tickets..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-space-xs rounded-full self-end leading-tight mt-0.5">Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Facilities</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">Parking Allocations</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Parking Allocations</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage basement parking slots, allocate vehicle quotas, and track EV charging bays.</p>
+</div>
+<!-- Global Actions -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">map</span>
+<span>Export Slot Map</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" id="openAllocateModalBtn">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Allocate Slot</span>
+</button>
+</div>
+</div>
+<!-- Metric Strip (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Parking Bays</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">local_parking</span>
+</div>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface">260 <span class="font-body-sm text-body-sm text-outline font-normal">Slots</span></div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-semibold bg-surface-container text-on-secondary-container">100% Capacity</span>
+<span>across 3 subterranean zones</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Occupied Bays</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+</div>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface">232 <span class="font-body-sm text-body-sm text-outline font-normal">Allocated</span></div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-container">89.2% Occupancy</span>
+<span>28 slots open</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 89.2%;"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Visitor &amp; Guest Bays</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">nest_doorbell_visitor</span>
+</div>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface">18 <span class="font-body-sm text-body-sm text-outline font-normal">Available</span></div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-semibold bg-surface-container text-on-secondary-container">Ground Hub</span>
+<span>4 short-term active</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">EV Charging Hubs</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">ev_station</span>
+</div>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface">12 <span class="font-body-sm text-body-sm text-outline font-normal">Active</span></div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">8 Charging</span>
+<span>4 idle ready</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 66.6%;"></div>
+</div>
+</div>
+</div>
+<!-- Interactive Slot Matrix Preview & Mini Map Visualizer -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Basement Architectural Floor Matrix</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant">Realtime Telemetry</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Live visual arrangement of allocated stalls, high-voltage EV points, and turnover slots.</p>
+</div>
+<!-- Status Legend -->
+<div class="flex flex-wrap items-center gap-space-md text-label-md font-label-md text-on-surface-variant bg-surface-container-low px-space-md py-1.5 rounded-full">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Allocated Resident</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span>EV Charging (Active)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+<span>Available / Free</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span>Visitor / Reserved</span>
+</div>
+</div>
+</div>
+<!-- Matrix Grid visualizer -->
+<div class="bg-surface p-space-md rounded-xl overflow-x-auto">
+<div class="min-w-[760px] flex flex-col gap-space-md">
+<!-- Zone A / Row 1 -->
+<div class="flex items-center gap-space-md">
+<div class="w-24 flex-shrink-0 font-label-sm text-label-sm uppercase tracking-wider text-outline">B1 • Wing A</div>
+<div class="flex-1 grid grid-cols-12 gap-2">
+<!-- 12 slots -->
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-001 (Allocated - Flat A-101)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">001</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-101</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-002 (Allocated - Flat A-102)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">002</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-102</span>
+</div>
+<div class="h-10 rounded-lg bg-tertiary-fixed/30 p-1.5 flex flex-col justify-between cursor-pointer hover:bg-tertiary-fixed/60 transition-colors shadow-sm" title="B1-003 (EV Active - Flat A-105)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-tertiary-container">003</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-tertiary-container">A-105⚡</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-004 (Available)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">004</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+<span class="font-label-sm text-[11px] font-normal text-outline">OPEN</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-005 (Allocated - Flat A-202)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">005</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-202</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-006 (Allocated - Flat A-204)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">006</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-204</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-007 (Allocated - Flat A-301)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">007</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-301</span>
+</div>
+<div class="h-10 rounded-lg bg-tertiary-fixed/30 p-1.5 flex flex-col justify-between cursor-pointer hover:bg-tertiary-fixed/60 transition-colors shadow-sm" title="B1-008 (EV Active - Flat A-304)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-tertiary-container">008</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-tertiary-container">A-304⚡</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-009 (Allocated - Flat A-401)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">009</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-401</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-010 (Available)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">010</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+<span class="font-label-sm text-[11px] font-normal text-outline">OPEN</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm opacity-60" title="B1-011 (Reserved Maintenance)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">011</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-outline">SVC</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-012 (Allocated - Flat A-502)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">012</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">A-502</span>
+</div>
+</div>
+</div>
+<!-- Driveway / Transit corridor visual indicator -->
+<div class="flex items-center gap-space-md">
+<div class="w-24"></div>
+<div class="flex-1 py-1 px-4 bg-surface-container rounded flex items-center justify-between text-outline text-label-sm uppercase tracking-widest font-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">arrow_forward</span> 6.0M Two-Way Transit Lane</span>
+<span>Ramp to Level B2</span>
+</div>
+</div>
+<!-- Zone B / Row 2 -->
+<div class="flex items-center gap-space-md">
+<div class="w-24 flex-shrink-0 font-label-sm text-label-sm uppercase tracking-wider text-outline">B1 • Wing B</div>
+<div class="flex-1 grid grid-cols-12 gap-2">
+<!-- 12 slots -->
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-013 (Allocated - Flat B-102)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">013</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-102</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-014 (Allocated - Flat B-103)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">014</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-103</span>
+</div>
+<div class="h-10 rounded-lg bg-tertiary-fixed/30 p-1.5 flex flex-col justify-between cursor-pointer hover:bg-tertiary-fixed/60 transition-colors shadow-sm" title="B1-015 (EV Active - Flat B-201)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-tertiary-container">015</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-tertiary-container">B-201⚡</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-016 (Allocated - Flat B-204)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">016</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-204</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-017 (Available)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">017</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+<span class="font-label-sm text-[11px] font-normal text-outline">OPEN</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-018 (Allocated - Flat B-302)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">018</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-302</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-019 (Visitor Reserved)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">019</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface-variant">VISIT</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-020 (Allocated - Flat B-402)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">020</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-402</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-021 (Allocated - Flat B-403)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">021</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-403</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm" title="B1-022 (Allocated - Flat B-501)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">022</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">B-501</span>
+</div>
+<div class="h-10 rounded-lg bg-tertiary-fixed/30 p-1.5 flex flex-col justify-between cursor-pointer hover:bg-tertiary-fixed/60 transition-colors shadow-sm" title="B1-023 (EV Active - Flat B-505)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-tertiary-container">023</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-tertiary-container">B-505⚡</span>
+</div>
+<div class="h-10 rounded-lg bg-surface-container-lowest p-1.5 flex flex-col justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm ring-1 ring-primary/40" title="B1-024 (Allocated - Flat A-101)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-primary font-bold">024</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-primary">A-101</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Level Switcher Tabs & Advanced Filters -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md mb-space-md">
+<!-- Level Selector Tabs -->
+<div class="flex items-center p-1 bg-surface-container-low rounded-xl gap-1 overflow-x-auto">
+<button class="level-tab px-space-md py-1.5 rounded-lg text-label-md font-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-sm whitespace-nowrap transition-all" data-level="all">
+        All Levels (260)
+      </button>
+<button class="level-tab px-space-md py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all" data-level="b1">
+        Basement 1 (B1 - Residential)
+      </button>
+<button class="level-tab px-space-md py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all" data-level="b2">
+        Basement 2 (B2 - Residential &amp; EV)
+      </button>
+<button class="level-tab px-space-md py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all" data-level="g">
+        Ground Level (Visitors &amp; Commercial)
+      </button>
+</div>
+<!-- Live Search & Filtering Actions -->
+<div class="flex items-center gap-space-sm">
+<div class="relative w-full sm:w-72">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm transition-all" id="searchInput" placeholder="Search slot ID, vehicle, or flat..." type="text"/>
+</div>
+<button class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center gap-1 text-label-md font-label-md shadow-sm transition-colors" title="Filter attributes">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="hidden sm:inline">Filters</span>
+</button>
+</div>
+</div>
+<!-- Allocations Directory Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-outline uppercase font-label-sm text-label-sm">
+<th class="py-3 px-space-md">Slot ID</th>
+<th class="py-3 px-space-md">Level / Zone</th>
+<th class="py-3 px-space-md">Allocated Flat</th>
+<th class="py-3 px-space-md">Resident Name</th>
+<th class="py-3 px-space-md">Registered Vehicle</th>
+<th class="py-3 px-space-md">Slot Type</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y-0" id="directoryTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">#B1-024</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Basement 1</span>
+<span class="text-label-sm font-label-sm text-outline">Wing A • Section 2</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold px-2 py-0.5 rounded bg-surface-container text-on-surface">Flat A-101</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold flex items-center justify-center">VM</div>
+<span class="font-medium">Vikram Malhotra</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold tracking-wide text-on-surface">KA-05-MH-4491</span>
+<span class="text-label-sm font-label-sm text-outline">Mahindra XUV700 • SUV</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 text-label-md font-label-md text-on-secondary-container bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">directions_car</span> Standard 4-Wheeler
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Allocated
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Reassign Slot">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View RFID / Tag info">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Release Slot">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">#B1-025</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Basement 1</span>
+<span class="text-label-sm font-label-sm text-outline">Wing B • Pillar 14</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold px-2 py-0.5 rounded bg-surface-container text-on-surface">Flat B-204</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-semibold flex items-center justify-center">RI</div>
+<span class="font-medium">Rohan Iyer</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold tracking-wide text-on-surface">KA-01-AB-9812</span>
+<span class="text-label-sm font-label-sm text-outline">Honda City • Sedan</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 text-label-md font-label-md text-on-secondary-container bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">directions_car</span> Standard 4-Wheeler
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Allocated
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Reassign Slot">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View RFID / Tag info">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Release Slot">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: EV Charging Bay -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-tertiary-container flex items-center gap-1">
+                #B2-110 <span class="material-symbols-outlined text-[14px]">bolt</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Basement 2</span>
+<span class="text-label-sm font-label-sm text-tertiary-container font-semibold">EV Fast-Charge Corridor</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold px-2 py-0.5 rounded bg-surface-container text-on-surface">Flat C-302</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-semibold flex items-center justify-center">SS</div>
+<span class="font-medium">Sunil Shenoy</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold tracking-wide text-on-surface">KA-03-EV-0402</span>
+<span class="text-label-sm font-label-sm text-outline">Tata Nexon EV • 22kW Bay</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 text-label-md font-label-md text-on-tertiary-fixed bg-tertiary-fixed px-2 py-0.5 rounded-full font-medium">
+<span class="material-symbols-outlined text-[14px]">ev_station</span> EV Charging Bay
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span> In Use (78%)
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Reassign Slot">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View RFID / Tag info">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Release Slot">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Ground Level Visitor Pool -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-secondary">#G-005</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Ground Level</span>
+<span class="text-label-sm font-label-sm text-outline">Portico / Clubhouse Entrance</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Visitor Pool</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">Dynamic Rotation</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold tracking-wide text-on-surface">DL-08-CC-1901</span>
+<span class="text-label-sm font-label-sm text-outline">Visitor Pass #VP-4819</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 text-label-md font-label-md text-on-secondary-container bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">local_convenience_store</span> Visitor / Guest
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-semibold bg-surface-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span> Occupied (Temp)
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Reassign Slot">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View Gate Pass">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Checkout Vehicle">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: 2-Wheeler Duo Bay -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-primary">#B1-088</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Basement 1</span>
+<span class="text-label-sm font-label-sm text-outline">Perimeter Wall Bay</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold px-2 py-0.5 rounded bg-surface-container text-on-surface">Flat A-504</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold flex items-center justify-center">PK</div>
+<span class="font-medium">Priya Kulkarni</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold tracking-wide text-on-surface">KA-04-ER-2200</span>
+<span class="text-label-sm font-label-sm text-outline">Ather 450X • EV Scooter</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 text-label-md font-label-md text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">two_wheeler</span> 2-Wheeler Duo
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Allocated
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Reassign Slot">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View RFID / Tag info">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Release Slot">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Vacant Ready Slot -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-on-surface">#B2-019</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Basement 2</span>
+<span class="text-label-sm font-label-sm text-outline">Wing C • Lower Ramp</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-outline text-label-md font-label-md font-medium">Unallocated</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">—</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-outline font-body-sm text-body-sm">None registered</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 text-label-md font-label-md text-on-secondary-container bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">directions_car</span> Standard 4-Wheeler
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-semibold bg-surface-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span> Vacant
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors">
+                  Allocate
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Bottom Ledger Status -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low text-on-surface-variant font-label-md text-label-md gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span>Showing</span>
+<span class="font-semibold text-on-surface">6</span>
+<span>of</span>
+<span class="font-semibold text-on-surface">260</span>
+<span>total parking slots</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-semibold text-label-sm">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm">
+          3
+        </button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm">
+          44
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Drawer: Allocate Slot (hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="allocateModal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in duration-150">
+<div class="px-space-lg py-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">add_circle</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Allocate New Parking Slot</span>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="closeAllocateModalBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1 font-medium">Select Level &amp; Bay</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<select class="h-10 px-3 rounded-lg bg-surface text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>Basement 1 (B1)</option>
+<option>Basement 2 (B2)</option>
+<option>Ground Floor (Visitor)</option>
+</select>
+<select class="h-10 px-3 rounded-lg bg-surface text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>Slot #B1-004 (Available)</option>
+<option>Slot #B1-010 (Available)</option>
+<option>Slot #B1-017 (Available)</option>
+<option>Slot #B2-019 (Available)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1 font-medium">Select Resident Flat</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. Flat C-404 or resident name" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1 font-medium">Vehicle Registration Number</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface text-body-md font-body-md text-on-surface placeholder:text-outline uppercase focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. MH-12-PQ-9081" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1 font-medium">Bay Type</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>Standard 4-Wheeler</option>
+<option>EV Charging Point</option>
+<option>2-Wheeler Duo</option>
+<option>Guest / VIP Reserved</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1 font-medium">RFID Tag Serial</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface text-body-md font-body-md text-on-surface placeholder:text-outline uppercase focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="TAG-8829-X" type="text"/>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">info</span>
+<span>Allocating a slot auto-syncs with Greenwood Gate boom barrier automatic number plate recognition (ANPR).</span>
+</div>
+</div>
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" id="cancelAllocateModalBtn">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" id="confirmAllocateBtn">
+          Confirm Allocation
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions: Level Tab Switcher
+  const levelTabs = document.querySelectorAll('.level-tab');
+  levelTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      levelTabs.forEach(t => {
+        t.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+        t.classList.add('text-on-surface-variant');
+      });
+      tab.classList.remove('text-on-surface-variant');
+      tab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+    });
+  });
+
+  // Modal interactions
+  const modal = document.getElementById('allocateModal');
+  const openModalBtn = document.getElementById('openAllocateModalBtn');
+  const closeModalBtn = document.getElementById('closeAllocateModalBtn');
+  const cancelModalBtn = document.getElementById('cancelAllocateModalBtn');
+  const confirmBtn = document.getElementById('confirmAllocateBtn');
+
+  function openModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
+      closeModal();
+    });
+  }
+
+  // Live filter mock
+  const searchInput = document.getElementById('searchInput');
+  const tableRows = document.querySelectorAll('#directoryTableBody tr');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      tableRows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (text.includes(query)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main></div></body></html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#00174b", "on-primary": "#ffffff", "tertiary-container": "#00174b", "surface-tint": "#565e74", "outline": "#76777d", "surface-dim": "#cbdbf5", "on-tertiary-fixed-variant": "#003ea8", "on-secondary-container": "#57657b", "on-secondary-fixed-variant": "#3a485c", "surface": "#f8f9ff", "background": "#f8f9ff", "error-container": "#ffdad6", "surface-container-highest": "#d3e4fe", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "secondary-container": "#d5e3fd", "on-background": "#0b1c30", "inverse-primary": "#bec6e0", "secondary-fixed-dim": "#b9c7e0", "on-tertiary-container": "#497cff", "surface-container-lowest": "#ffffff", "on-primary-container": "#7c839b", "inverse-surface": "#213145", "on-primary-fixed-variant": "#3f465c", "secondary": "#515f74", "tertiary": "#000000", "secondary-fixed": "#d5e3fd", "on-error": "#ffffff", "on-secondary-fixed": "#0d1c2f", "primary-fixed-dim": "#bec6e0", "on-secondary": "#ffffff", "on-surface": "#0b1c30", "on-primary-fixed": "#131b2e", "surface-variant": "#d3e4fe", "primary-container": "#131b2e", "primary": "#000000", "surface-container-low": "#eff4ff", "surface-container-high": "#dce9ff", "surface-container": "#e5eeff", "error": "#ba1a1a", "tertiary-fixed": "#dbe1ff", "primary-fixed": "#dae2fd", "tertiary-fixed-dim": "#b4c5ff", "inverse-on-surface": "#eaf1ff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "margin-compact": "1rem", "space-lg": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "gutter-compact": "0.5rem", "space-md": "0.75rem", "margin": "1.5rem", "gutter": "1rem" }, "fontFamily": { "headline-xl": [ "Inter" ], "body-md": [ "Inter" ], "headline-md": [ "Inter" ], "headline-sm": [ "Inter" ], "data-mono": [ "Inter" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg": [ "Inter" ] }, "fontSize": { "headline-xl": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "data-mono": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.025em", "fontWeight": "600" } ], "headline-lg": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-primary-container z-50 flex flex-col justify-between select-none shadow-none"><div class="flex flex-col h-full overflow-hidden"><div class="h-14 px-space-lg flex items-center justify-between bg-primary-container"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight leading-none">CivicQuarters</span><span class="font-label-sm text-label-sm text-on-primary-container text-[10px] uppercase tracking-wider leading-none mt-1">ACID Relational ERP</span></div></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high/20 text-on-primary-container text-[9px] font-semibold border border-outline-variant/30">v2.4</span></div><div class="px-space-md py-space-xs bg-inverse-surface/40 flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span><span class="font-data-mono text-data-mono text-[11px] text-primary-fixed">DBMS: MySQL 8.0</span></div><span class="font-label-sm text-label-sm text-[10px] text-surface-variant font-mono uppercase">3NF Strict</span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-sm space-y-space-md" data-active-classes="bg-inverse-surface text-on-primary font-semibold rounded-lg shadow-none"><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">Main</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="flats-buildings" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span>Flats &amp; Buildings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="residents" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span>Residents</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="occupancy-history" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span>Occupancy History (3NF)</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">Operations &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="maintenance-billing" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Maintenance Billing</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="payments-ledgers" href="#"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span>Payments &amp; Ledgers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="service-tickets" href="#"><span class="material-symbols-outlined text-[18px]">confirmation_number</span><span>Service Tickets (SLA)</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="visitors-gate-logs" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Visitors &amp; Gate Logs</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">Facilities</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="amenities-bookings" href="#"><span class="material-symbols-outlined text-[18px]">pool</span><span>Amenities &amp; Bookings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="parking-allocations" href="#"><span class="material-symbols-outlined text-[18px]">local_parking</span><span>Parking Allocations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="staff-management" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Staff Management</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">System &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="reports-audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Reports &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="project-overview" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span>Project Overview (SRM)</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></div></nav></div><div class="p-space-sm bg-primary-container"><div class="p-space-sm rounded-lg bg-inverse-surface/60 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold">SA</div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-primary font-semibold truncate leading-none">SRM Admin Node</span><span class="font-label-sm text-label-sm text-on-primary-container text-[10px] leading-none mt-1">Super Admin</span></div></div><span class="material-symbols-outlined text-primary-fixed text-[18px]">verified_user</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="CivicQuarters Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VV2LOS3tFQhz6uP6OEGTx7mqvOYaZf2rL-geIcITH-er87n_i_40WbE171rKKJkvi0HNQnq984EZNVbhcn5D_YcG4WpM75b9BmcYtUvJ8lWSEkrPBe_DPyx5RRAtV-8oF3xsqA3rmx4-8vgT1FiG-yppkvKbjiGwyYUvrW6IyV1sW-scrMGj79nCeI7kBnNL7oanxJp1Eel2HlAw7wVOWNOJejAjZHm6jDJ5710ZL226Moj2F7jvblMwc"/><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">location_city</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Greenwood Crest Residency - Block A to D</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-secondary-container"><span class="w-1.5 h-1.5 rounded-full bg-on-secondary-fixed-variant"></span><span class="font-label-sm text-label-sm text-[11px] font-medium">DB: MySQL 8.0 / 3NF Synced</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-64 justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm">Universal Search...</span></div><kbd class="font-data-mono text-data-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">⌘K</kbd></div><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></div><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-inverse-surface hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>New Entry</span></button><div class="flex items-center gap-2 pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Super Administrator</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[10px] leading-tight">ACID Commits (RW)</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant hidden lg:block">unfold_more</span></div></div></div></header><main class="w-full pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- System Diagnostic Sub-Ribbon -->
+<div class="w-full bg-surface-container-low px-space-xl py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Capstone Node: SRM-TRP-2024-DBMS-R1</span>
+</div>
+<span class="text-outline-variant font-label-sm text-label-sm">|</span>
+<div class="flex items-center gap-1.5 font-data-mono text-data-mono text-secondary">
+<span class="material-symbols-outlined text-[16px] text-secondary">database</span>
+<span>Schema Engine: MySQL 8.0.36-InnoDB (Strict 3NF)</span>
+</div>
+<span class="text-outline-variant font-label-sm text-label-sm">|</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>ACID Serializability: ENABLED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-[11px] font-label-sm font-semibold">Review 1 Active</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center gap-1 shadow-sm" onclick="window.print()">
+<span class="material-symbols-outlined text-[14px]">print</span>
+<span>Print Specification</span>
+</button>
+</div>
+</div>
+<div class="w-full p-space-xl space-y-space-xl">
+<!-- Academic Hero Header -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 w-96 h-96 bg-surface-container-low rounded-full opacity-60 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-space-xl">
+<div class="space-y-space-sm max-w-4xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">Academic Capstone</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">B.Tech AI &amp; DS / CSE • Batch 2024–2028</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Course: DBMS Capstone (Review 1)</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Apartment &amp; Resident Management System
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            A Normalized Relational Database System (SQL) engineered for community housing administration, high-concurrency temporal tenancy tracking, and strict ACID transactional integrity across multi-tiered residential workflows.
+          </p>
+<div class="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">school</span>
+<span class="font-semibold text-on-surface">SRM Institute of Science and Technology</span>
+<span>(Tiruchirappalli Campus)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">person_celebrate</span>
+<span>Guide: <strong class="text-on-surface">Dr. S. P. Ramya</strong> (Assistant Professor)</span>
+</div>
+</div>
+</div>
+<!-- Quick Summary Gauge Card -->
+<div class="w-full xl:w-80 bg-surface-container-low p-space-lg rounded-lg flex flex-col justify-between space-y-space-md flex-shrink-0">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Review 1 Readiness</span>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold mt-0.5">87.5% Complete</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[10px] font-label-sm font-semibold">Milestone 2/4</span>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-1.5">
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 87.5%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant text-[11px]">
+<span>Problem Matrix &amp; 3NF Schema</span>
+<span class="font-semibold text-on-surface">Review Stage 1 OK</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-data-mono text-data-mono text-[11px] text-secondary">
+<span>Normalized Entities: <strong>9</strong></span>
+<span>Relational FKs: <strong>14</strong></span>
+<span>Triggers: <strong>3 Active</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Members & Mentorship Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<!-- Member 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold flex-shrink-0">
+          SB
+        </div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Surya B</div>
+<div class="font-data-mono text-data-mono text-[11px] text-on-surface-variant truncate">RA2411047050042</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary uppercase">Lead Architect • Schema Design</div>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-secondary text-on-secondary flex items-center justify-center font-headline-sm text-headline-sm font-bold flex-shrink-0">
+          RR
+        </div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Rohan Raj</div>
+<div class="font-data-mono text-data-mono text-[11px] text-on-surface-variant truncate">RA2411047050010</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary uppercase">Backend Services • Triggers</div>
+</div>
+</div>
+<!-- Member 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold flex-shrink-0">
+          SM
+        </div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Saminathan M</div>
+<div class="font-data-mono text-data-mono text-[11px] text-on-surface-variant truncate">RA2411047050055</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary uppercase">Relational Constraints • API</div>
+</div>
+</div>
+<!-- Faculty Mentor -->
+<div class="bg-surface-container-low p-space-md rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest text-on-surface flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px] text-primary">psychology</span>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. S. P. Ramya</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Assistant Professor (Guide)</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary uppercase">Dept of AI &amp; DS / CSE</div>
+</div>
+</div>
+</div>
+<!-- Capstone Milestone Roadmap & Four-Tier Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Milestone Tracker (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">flag</span>
+<span>Project Review Roadmap</span>
+</h2>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Evaluation Cycle</span>
+</div>
+<div class="space-y-space-lg relative mt-2">
+<!-- Phase 1 -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 text-[12px] font-bold">
+<span class="material-symbols-outlined text-[16px]">done</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Phase 1: Problem Definition &amp; Scope</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-surface-container-high text-on-surface">COMPLETED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Identified 6 residential operational breakdowns, stakeholder persona matrix (Admins, Owners, Tenants, Guards), and ACID failure modes.
+                </p>
+</div>
+</div>
+<!-- Phase 2 (Active) -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center flex-shrink-0 text-[12px] font-bold ring-2 ring-primary">
+<span class="material-symbols-outlined text-[16px] text-primary">play_arrow</span>
+</div>
+<div class="flex-1 min-w-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Phase 2: Review 1 &amp; Schema 3NF</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-primary text-on-primary">ACTIVE NOW</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Normalization up to 3NF across 9 entities, primary key/foreign key referential integrity constraints, automated trigger design, and architecture pipeline.
+                </p>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="flex items-start gap-space-md relative opacity-75">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0 text-[12px] font-bold">
+                3
+              </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Phase 3: ER Modeling &amp; DDL Migration</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-surface-container text-on-surface-variant">UPCOMING</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Crow's foot ERD verification, physical MySQL schema indexing, stored procedures for composite billing computations, and seed datasets.
+                </p>
+</div>
+</div>
+<!-- Phase 4 -->
+<div class="flex items-start gap-space-md relative opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0 text-[12px] font-bold">
+                4
+              </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Phase 4: Full App Integration &amp; Review 2</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-surface-container text-on-surface-variant">PLANNED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  REST API layer, real-time dashboard binding, audit transaction logs, and live capstone defense demonstration.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface">Academic Rubric Met: Normalization, Integrity, DDL/DML Ready</span>
+</div>
+<span class="font-data-mono text-data-mono text-[11px] text-secondary">SRM-DEC-2024</span>
+</div>
+</div>
+<!-- Four-Tier Architectural Flow Pipeline (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<span>Four-Tier Architectural Workflow Engine</span>
+</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Data transformation lifecycle: Ingestion → Transactional Compute → Storage → Dispatch</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">ACID Pipeline</span>
+</div>
+<!-- Flow Diagram Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm pt-space-sm">
+<!-- Tier 1: Input -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary text-[10px]">Tier 01</span>
+<span class="material-symbols-outlined text-primary text-[18px]">input</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Input Tier</h3>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Resident &amp; Flat Profiles</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Payment Txn Inputs</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Gate Visitor OCR/Phone</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Amenity Slot Requests</span>
+</li>
+</ul>
+</div>
+<div class="font-data-mono text-data-mono text-[10px] text-secondary bg-surface-container-lowest p-1 rounded">
+                Ingress: JSON / Web Forms
+              </div>
+</div>
+<!-- Tier 2: Process -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary text-[10px]">Tier 02</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">settings_suggest</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Process Tier</h3>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>JWT &amp; RBAC Validation</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Overdue Penalty Daemon</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Slot Overlap Detector</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>SLA Ticket State Flow</span>
+</li>
+</ul>
+</div>
+<div class="font-data-mono text-data-mono text-[10px] text-secondary bg-surface-container-lowest p-1 rounded">
+                Python 3.11 / REST Logic
+              </div>
+</div>
+<!-- Tier 3: Database -->
+<div class="bg-primary text-on-primary p-space-md rounded-lg flex flex-col justify-between space-y-3 shadow-md">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed text-[10px]">Tier 03 (Core)</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">database</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2 font-bold">Relational DBMS</h3>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-primary-fixed-dim text-[12px]">
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+<span>InnoDB ACID Engine</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+<span>3NF Normal Form</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+<span>CASCADE / RESTRICT FKs</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+<span>SQL Audit Triggers</span>
+</li>
+</ul>
+</div>
+<div class="font-data-mono text-data-mono text-[10px] text-primary-fixed bg-surface-container-highest/20 p-1 rounded">
+                MySQL 8.0 / Strict Constraints
+              </div>
+</div>
+<!-- Tier 4: Output -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary text-[10px]">Tier 04</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">output</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Output Tier</h3>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Receipt Hashes / Ledger</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Breach Escalations</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Defaulter Registry</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Gate Pass Tokens</span>
+</li>
+</ul>
+</div>
+<div class="font-data-mono text-data-mono text-[10px] text-secondary bg-surface-container-lowest p-1 rounded">
+                Dispatch: UI &amp; Webhooks
+              </div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex flex-wrap items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">sync_alt</span>
+<span>Flow Principle: Input Validated → Invariant Evaluated → ACID Commit → Client Dispatched</span>
+</div>
+<span class="font-data-mono text-data-mono text-[11px] text-secondary">Latency Target: &lt;14ms per DML</span>
+</div>
+</div>
+</div>
+<!-- The 6 Operational Friction Points Solved (Executive Matrix) -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">troubleshoot</span>
+<span>6 Core Operational Friction Points Solved</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-world community management failures mapped directly to 3NF schema and DBMS mathematical countermeasures.</p>
+</div>
+<div class="px-3 py-1 rounded bg-surface-container-low text-on-surface font-data-mono text-data-mono text-[12px]">
+          Target: Zero Inconsistency &amp; Non-Loss Decomposition
+        </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md pt-2">
+<!-- Friction Point 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Friction #1</span>
+<span class="material-symbols-outlined text-error text-[18px]">history_edu</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Overwritten Tenancy Records</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Traditional spreadsheets or flat tables replace tenant names upon move-out, destroying historical maintenance dues, police verification audits, and legal accountability.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] space-y-1">
+<div class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Solution: Temporal 3NF Log</span>
+</div>
+<p class="text-on-surface-variant font-data-mono text-[11px]">
+              Entity <span class="font-bold text-on-surface">`Occupancy_History`</span> with surrogate <code class="bg-surface-container px-1 py-0.5 rounded">tenancy_id</code> PK, valid-time intervals, and append-only constraints.
+            </p>
+</div>
+</div>
+<!-- Friction Point 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Friction #2</span>
+<span class="material-symbols-outlined text-error text-[18px]">price_change</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Dues &amp; Late Fee Revenue Leakage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Manual invoice generation and late fine computations lead to unpaid accruals, disputed penalties, and arbitrary manual fee waivers with no audit trail.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] space-y-1">
+<div class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Solution: Automated Trigger Enforcement</span>
+</div>
+<p class="text-on-surface-variant font-data-mono text-[11px]">
+              DBMS Trigger <code class="bg-surface-container px-1 py-0.5 rounded">trg_calc_overdue_penalty()</code> executes nightly with immutable snapshot ledgers in <span class="font-bold text-on-surface">`Maintenance_Invoices`</span>.
+            </p>
+</div>
+</div>
+<!-- Friction Point 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Friction #3</span>
+<span class="material-symbols-outlined text-error text-[18px]">pending_actions</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Untracked Maintenance SLAs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Resident complaints regarding plumbing, lifts, and electricity get lost in WhatsApp chats or verbal handoffs to building staff without escalation clocks.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] space-y-1">
+<div class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Solution: State Machine &amp; Timestamp Audits</span>
+</div>
+<p class="text-on-surface-variant font-data-mono text-[11px]">
+<span class="font-bold text-on-surface">`Service_Tickets`</span> enforces enum state transitions <code class="bg-surface-container px-1 py-0.5 rounded">OPEN -&gt; ASSIGNED -&gt; RESOLVED</code> with staff FK assignment.
+            </p>
+</div>
+</div>
+<!-- Friction Point 4 -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Friction #4</span>
+<span class="material-symbols-outlined text-error text-[18px]">security</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Unverified Paper Visitor Logs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Physical gate registers contain illegible handwriting, fictitious destination flat numbers, zero check-out tracking, and non-existent forensic traceability.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] space-y-1">
+<div class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Solution: Relational Gate Verification</span>
+</div>
+<p class="text-on-surface-variant font-data-mono text-[11px]">
+<span class="font-bold text-on-surface">`Visitor_Logs`</span> binds foreign key <code class="bg-surface-container px-1 py-0.5 rounded">destination_flat_id</code> with check-in timestamping and guard badge ID validation.
+            </p>
+</div>
+</div>
+<!-- Friction Point 5 -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Friction #5</span>
+<span class="material-symbols-outlined text-error text-[18px]">event_busy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Amenity Double-Bookings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Simultaneous bookings for the clubhouse, pool pavilion, and tennis courts cause resident clashes due to lack of race-condition prevention in manual logs.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] space-y-1">
+<div class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Solution: Slot Exclusion Constraints</span>
+</div>
+<p class="text-on-surface-variant font-data-mono text-[11px]">
+<span class="font-bold text-on-surface">`Amenity_Bookings`</span> operates with serializable isolation &amp; overlap checks <code class="bg-surface-container px-1 py-0.5 rounded">NOT (start &gt;= b.end OR end &lt;= b.start)</code>.
+            </p>
+</div>
+</div>
+<!-- Friction Point 6 -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Friction #6</span>
+<span class="material-symbols-outlined text-error text-[18px]">local_parking</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Unregistered Parking Disputes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Tenants and visitors occupy unauthorized basement slots; lack of unit-level parking quotas sparks daily conflict and blocked emergency fire access.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] space-y-1">
+<div class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Solution: 1:1 / 1:N Slot Quota Model</span>
+</div>
+<p class="text-on-surface-variant font-data-mono text-[11px]">
+<span class="font-bold text-on-surface">`Parking_Slots`</span> maintains deterministic <code class="bg-surface-container px-1 py-0.5 rounded">assigned_flat_id</code> FK and UNIQUE constraint on vehicle registration strings.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- 9 Relational Entities Catalog (Normalized 3NF Model) -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm space-y-space-lg">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-space-sm pb-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Database Architecture: 9 Normalized Entities (3NF)</h2>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm text-[10px]">Strict Boyce-Codd &amp; 3NF</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every non-key attribute is fully functionally dependent on the Primary Key, and only on the Primary Key (no transitive dependencies).</p>
+</div>
+<!-- Entity Quick Filter / Switcher -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<span class="font-label-sm text-label-sm px-2 text-on-surface-variant">Schema View:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm font-semibold text-on-surface shadow-sm">All 9 Tables</span>
+</div>
+</div>
+<!-- Entity Tables Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Table 1: Flats -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">1. Flats</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Spatial Physical</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">flat_id (PK, INT AUTO_INC)</div>
+<div class="text-on-surface">block_id (VARCHAR(4))</div>
+<div class="text-on-surface">floor_no (SMALLINT)</div>
+<div class="text-on-surface">flat_no (VARCHAR(8))</div>
+<div class="text-on-surface">carpet_sqft (DECIMAL(7,2))</div>
+<div class="text-on-surface">typology (ENUM: 1BHK, 2BHK, 3BHK, Penthouse)</div>
+<div class="text-secondary font-semibold">owner_id (FK -&gt; Residents.resident_id)</div>
+<div class="text-on-surface">status (ENUM: Occupied, Vacant, Maintenance)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Constraint: <code class="text-primary">UNIQUE(block_id, flat_no)</code>
+</div>
+</div>
+<!-- Table 2: Residents -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">2. Residents</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Persona Entity</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">resident_id (PK, INT AUTO_INC)</div>
+<div class="text-on-surface">first_name (VARCHAR(50))</div>
+<div class="text-on-surface">last_name (VARCHAR(50))</div>
+<div class="text-on-surface">phone (VARCHAR(15) UNIQUE)</div>
+<div class="text-on-surface">email (VARCHAR(100) UNIQUE)</div>
+<div class="text-on-surface">id_proof_type (ENUM: Aadhaar, PAN, Passport)</div>
+<div class="text-on-surface">id_proof_no (VARCHAR(30) UNIQUE)</div>
+<div class="text-on-surface">resident_type (ENUM: Owner, Tenant, Family)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Zero Nulls on KYC Identifiers
+          </div>
+</div>
+<!-- Table 3: Occupancy_History -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">3. Occupancy_History</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-primary text-on-primary">Temporal 3NF</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">tenancy_id (PK, BIGINT AUTO_INC)</div>
+<div class="text-secondary font-semibold">flat_id (FK -&gt; Flats.flat_id)</div>
+<div class="text-secondary font-semibold">resident_id (FK -&gt; Residents.resident_id)</div>
+<div class="text-on-surface">move_in_date (DATE NOT NULL)</div>
+<div class="text-on-surface">move_out_date (DATE NULL)</div>
+<div class="text-on-surface">lease_doc_ref (VARCHAR(255))</div>
+<div class="text-on-surface">police_verif_status (ENUM: Pending, Verified)</div>
+<div class="text-on-surface">is_active (BOOLEAN DEFAULT TRUE)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Constraint: Check <code class="text-primary">move_out_date &gt;= move_in_date</code>
+</div>
+</div>
+<!-- Table 4: Maintenance_Invoices -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">4. Maintenance_Invoices</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Financial Ledger</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">invoice_id (PK, BIGINT AUTO_INC)</div>
+<div class="text-secondary font-semibold">flat_id (FK -&gt; Flats.flat_id)</div>
+<div class="text-on-surface">billing_month (CHAR(7)) -- 'YYYY-MM'</div>
+<div class="text-on-surface">base_amount (DECIMAL(10,2))</div>
+<div class="text-on-surface">late_fee (DECIMAL(10,2) DEFAULT 0.00)</div>
+<div class="text-on-surface font-bold">total_due (DECIMAL(10,2) GENERATED)</div>
+<div class="text-on-surface">due_date (DATE)</div>
+<div class="text-on-surface">status (ENUM: Unpaid, Paid, Overdue, Waived)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Trigger Target: <code class="text-primary">trg_calc_overdue_penalty()</code>
+</div>
+</div>
+<!-- Table 5: Payments -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">5. Payments</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">ACID Settlement</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">payment_id (PK, BIGINT AUTO_INC)</div>
+<div class="text-secondary font-semibold">invoice_id (FK -&gt; Maintenance_Invoices)</div>
+<div class="text-on-surface">amount_paid (DECIMAL(10,2))</div>
+<div class="text-on-surface">payment_date (DATETIME DEFAULT NOW())</div>
+<div class="text-on-surface">payment_mode (ENUM: UPI, NEFT, Card, Cash)</div>
+<div class="text-on-surface">txn_ref_no (VARCHAR(64) UNIQUE)</div>
+<div class="text-on-surface">receipt_hash (CHAR(64)) -- SHA-256</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Integrity: Idempotent Transaction Keys
+          </div>
+</div>
+<!-- Table 6: Service_Tickets -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">6. Service_Tickets</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Operations SLA</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">ticket_id (PK, INT AUTO_INC)</div>
+<div class="text-secondary font-semibold">flat_id (FK -&gt; Flats.flat_id)</div>
+<div class="text-secondary font-semibold">resident_id (FK -&gt; Residents.resident_id)</div>
+<div class="text-on-surface">category (ENUM: Electrical, Plumbing, Civil, Lift)</div>
+<div class="text-on-surface">priority (ENUM: Low, Medium, High, Emergency)</div>
+<div class="text-on-surface">status (ENUM: Open, Assigned, In_Progress, Closed)</div>
+<div class="text-secondary font-semibold">assigned_staff_id (FK NULLABLE)</div>
+<div class="text-on-surface">created_at / resolved_at (DATETIME)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            SLA Escalation Daemon Monitoring
+          </div>
+</div>
+<!-- Table 7: Visitor_Logs -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">7. Visitor_Logs</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Perimeter Security</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">visitor_id (PK, BIGINT AUTO_INC)</div>
+<div class="text-on-surface">visitor_name (VARCHAR(60))</div>
+<div class="text-on-surface">phone (VARCHAR(15))</div>
+<div class="text-on-surface">vehicle_no (VARCHAR(20) NULL)</div>
+<div class="text-secondary font-semibold">destination_flat_id (FK -&gt; Flats.flat_id)</div>
+<div class="text-on-surface">checkin_time (DATETIME DEFAULT NOW())</div>
+<div class="text-on-surface">checkout_time (DATETIME NULL)</div>
+<div class="text-on-surface">guard_id (INT) &amp; status (ENUM)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Automatic Resident Push Handshake
+          </div>
+</div>
+<!-- Table 8: Amenities & Amenity_Bookings -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">8. Amenities &amp; Bookings</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Facility Asset</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">amenity_id (PK) | booking_id (PK)</div>
+<div class="text-on-surface">name, capacity, hourly_rate (DECIMAL)</div>
+<div class="text-on-surface">opening_time, closing_time (TIME)</div>
+<div class="text-secondary font-semibold">amenity_id (FK -&gt; Amenities)</div>
+<div class="text-secondary font-semibold">flat_id (FK -&gt; Flats.flat_id)</div>
+<div class="text-on-surface">slot_start (DATETIME)</div>
+<div class="text-on-surface">slot_end (DATETIME)</div>
+<div class="text-on-surface">status (ENUM: Confirmed, Cancelled, Completed)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Constraint: Overlap Exclusion Indexing
+          </div>
+</div>
+<!-- Table 9: Parking_Slots -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col justify-between">
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-on-surface font-bold">9. Parking_Slots</span>
+</div>
+<span class="font-label-sm text-label-sm text-[10px] px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary">Asset Allocation</span>
+</div>
+<div class="p-space-md font-data-mono text-data-mono text-[12px] space-y-1.5 flex-1">
+<div class="text-primary font-bold">slot_id (PK, INT AUTO_INC)</div>
+<div class="text-on-surface">slot_code (VARCHAR(10) UNIQUE) -- e.g. B1-A12</div>
+<div class="text-on-surface">basement_level (ENUM: B1, B2, Ground, Open)</div>
+<div class="text-secondary font-semibold">assigned_flat_id (FK -&gt; Flats.flat_id NULL)</div>
+<div class="text-on-surface">vehicle_reg_no (VARCHAR(20) NULL)</div>
+<div class="text-on-surface">allocation_status (ENUM: Allocated, Reserved, Free)</div>
+</div>
+<div class="px-space-md py-1.5 bg-surface-container-lowest text-[11px] font-body-sm text-on-surface-variant">
+            Constraint: Check vehicle format validity
+          </div>
+</div>
+</div>
+</div>
+<!-- SQL DDL / Automated Trigger / ACID Code Highlights -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- DDL Highlight Card -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">code</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">3NF DDL: Temporal Tenancy Schema</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-data-mono text-data-mono text-[10px] text-secondary">InnoDB Engine</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Prevents data loss when tenancy terminates. Employs cascading foreign key constraints and temporal checks.
+          </p>
+<pre class="bg-primary-container text-primary-fixed p-space-md rounded-lg font-data-mono text-data-mono text-[11px] overflow-x-auto leading-relaxed select-all"><span class="text-on-primary-container">-- Temporal 3NF Residency Relation</span>
+<span class="text-primary-fixed font-bold">CREATE TABLE</span> Occupancy_History (
+    tenancy_id           <span class="text-primary-fixed font-semibold">BIGINT AUTO_INCREMENT PRIMARY KEY</span>,
+    flat_id              <span class="text-primary-fixed font-semibold">INT NOT NULL</span>,
+    resident_id          <span class="text-primary-fixed font-semibold">INT NOT NULL</span>,
+    move_in_date         <span class="text-primary-fixed font-semibold">DATE NOT NULL</span>,
+    move_out_date        <span class="text-primary-fixed">DATE NULL</span>,
+    lease_doc_ref        <span class="text-primary-fixed">VARCHAR(255)</span>,
+    police_verif_status  <span class="text-primary-fixed font-semibold">ENUM('Pending','Verified','Rejected')</span> 
+                         <span class="text-primary-fixed">DEFAULT 'Pending'</span>,
+    is_active            <span class="text-primary-fixed font-semibold">BOOLEAN DEFAULT TRUE</span>,
+    
+    <span class="text-on-primary-container">-- Referential Integrity Invariants</span>
+    <span class="text-primary-fixed font-bold">CONSTRAINT</span> fk_occ_flat 
+        <span class="text-primary-fixed font-bold">FOREIGN KEY</span> (flat_id) <span class="text-primary-fixed font-bold">REFERENCES</span> Flats(flat_id)
+        <span class="text-primary-fixed">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+    <span class="text-primary-fixed font-bold">CONSTRAINT</span> fk_occ_res 
+        <span class="text-primary-fixed font-bold">FOREIGN KEY</span> (resident_id) <span class="text-primary-fixed font-bold">REFERENCES</span> Residents(resident_id)
+        <span class="text-primary-fixed">ON DELETE RESTRICT ON UPDATE CASCADE</span>,
+        
+    <span class="text-on-primary-container">-- Domain Constraint</span>
+    <span class="text-primary-fixed font-bold">CONSTRAINT</span> chk_tenancy_dates 
+        <span class="text-primary-fixed font-bold">CHECK</span> (move_out_date <span class="text-primary-fixed font-bold">IS NULL OR</span> move_out_date &gt;= move_in_date)
+) <span class="text-primary-fixed">ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</span>;</pre>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-[11px] font-label-sm text-label-sm text-secondary">
+<span>Non-loss decomposition guarantee</span>
+<span>Indexed PK/FK join paths</span>
+</div>
+</div>
+<!-- Automated Trigger Highlight Card -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Automated Trigger: Overdue Penalty Engine</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-data-mono text-data-mono text-[10px] text-secondary">SQL Trigger</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Eliminates human revenue leakage by computing daily late fees dynamically prior to ledger update commits.
+          </p>
+<pre class="bg-primary-container text-primary-fixed p-space-md rounded-lg font-data-mono text-data-mono text-[11px] overflow-x-auto leading-relaxed select-all"><span class="text-on-primary-container">-- Trigger: Dynamic Late Fine Enforcement</span>
+<span class="text-primary-fixed font-bold">DELIMITER</span> $$
+<span class="text-primary-fixed font-bold">CREATE TRIGGER</span> trg_calc_overdue_penalty
+<span class="text-primary-fixed font-bold">BEFORE UPDATE ON</span> Maintenance_Invoices
+<span class="text-primary-fixed font-bold">FOR EACH ROW</span>
+<span class="text-primary-fixed font-bold">BEGIN</span>
+    <span class="text-primary-fixed font-bold">DECLARE</span> days_overdue <span class="text-primary-fixed">INT</span>;
+    <span class="text-primary-fixed font-bold">IF</span> NEW.status != 'Paid' <span class="text-primary-fixed font-bold">AND</span> CURRENT_DATE() &gt; NEW.due_date <span class="text-primary-fixed font-bold">THEN</span>
+        <span class="text-primary-fixed font-bold">SET</span> days_overdue = DATEDIFF(CURRENT_DATE(), NEW.due_date);
+        <span class="text-on-primary-container">-- Compound Penalty: ₹75 per day past grace period</span>
+        <span class="text-primary-fixed font-bold">SET</span> NEW.late_fee = days_overdue * 75.00;
+        <span class="text-primary-fixed font-bold">SET</span> NEW.status = 'Overdue';
+    <span class="text-primary-fixed font-bold">END IF</span>;
+<span class="text-primary-fixed font-bold">END</span>$$
+<span class="text-primary-fixed font-bold">DELIMITER</span> ;</pre>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-[11px] font-label-sm text-label-sm text-secondary">
+<span>Determinism: Deterministic state output</span>
+<span>Zero manual intervention</span>
+</div>
+</div>
+</div>
+<!-- Technology Stack Specifications Grid -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<span>Technology Stack &amp; Development Toolchain</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated enterprise toolchain aligned with SRM Institute of Science &amp; Technology capstone review guidelines.</p>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Standard Architecture</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-2">
+<!-- Frontend -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">web</span>
+</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Frontend Client</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary">Tier 1 Presentation</div>
+</div>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 pt-1 text-[12px]">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>React.js (SPA Architecture)</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Tailwind CSS Utility Engine</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>HTML5 Semantic UI &amp; Canvas</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Material Symbols Icons</li>
+</ul>
+</div>
+<!-- Backend -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">API &amp; Backend</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary">Tier 2 Logic Daemon</div>
+</div>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 pt-1 text-[12px]">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Python 3.11 Runtime</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Django / Flask REST API</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>JWT Token Authentication</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>PyMySQL / SQLAlchemy ORM</li>
+</ul>
+</div>
+<!-- Database -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">ACID Database</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary">Tier 3 Normalized Storage</div>
+</div>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 pt-1 text-[12px]">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>MySQL 8.0 (InnoDB)</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>PostgreSQL (Failover)</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>3NF Strict Normal Form</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>ACID Isolation: Repeatable Read</li>
+</ul>
+</div>
+<!-- Tooling -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">build</span>
+</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Dev Tooling</div>
+<div class="font-label-sm text-label-sm text-[10px] text-secondary">DevOps &amp; Testing</div>
+</div>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 pt-1 text-[12px]">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>MySQL Workbench (ER Modeling)</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Postman (Endpoint Test Suite)</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Git &amp; GitHub Version Control</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>VS Code Workspace Engine</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Academic Footer Affirmation -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Review 1 Academic Submission Dossier Prepared
+          </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Department of Artificial Intelligence &amp; Data Science / CSE • SRM Institute of Science and Technology, Tiruchirappalli
+          </div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container shadow-sm flex items-center gap-1" onclick="alert('Exporting Schema SQL DDL script...')">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download SQL DDL Script</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-inverse-surface shadow-sm flex items-center gap-1" onclick="alert('Review 1 submission status: Confirmed &amp; locked.')">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Review 1 Baseline Locked</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

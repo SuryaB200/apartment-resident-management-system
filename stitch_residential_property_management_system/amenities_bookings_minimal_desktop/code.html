@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#dae2fd","surface-dim":"#d2d9f4","on-surface":"#131b2e","tertiary-container":"#00577e","on-primary-fixed":"#100069","tertiary":"#003f5c","inverse-on-surface":"#eef0ff","tertiary-fixed":"#c9e6ff","on-surface-variant":"#464554","outline":"#777586","inverse-surface":"#283044","outline-variant":"#c7c4d7","error":"#ba1a1a","secondary-fixed-dim":"#b9c7e0","on-secondary":"#ffffff","surface-container-high":"#e2e7ff","surface-container":"#eaedff","on-tertiary":"#ffffff","primary-fixed-dim":"#c3c0ff","primary":"#2a14b4","on-secondary-container":"#57657b","on-secondary-fixed-variant":"#3a485c","on-tertiary-container":"#84cdff","inverse-primary":"#c3c0ff","primary-fixed":"#e3dfff","surface-variant":"#dae2fd","on-background":"#131b2e","on-secondary-fixed":"#0d1c2f","surface-container-low":"#f2f3ff","tertiary-fixed-dim":"#89ceff","on-error-container":"#93000a","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface":"#faf8ff","surface-tint":"#5148d7","on-tertiary-fixed":"#001e2f","on-primary-fixed-variant":"#372abf","on-tertiary-fixed-variant":"#004c6e","background":"#faf8ff","primary-container":"#4338ca","surface-bright":"#faf8ff","on-error":"#ffffff","on-primary-container":"#c1beff","secondary":"#515f74","on-primary":"#ffffff","secondary-container":"#d5e3fd","secondary-fixed":"#d5e3fd"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","margin-lg":"3rem","gutter-sm":"1rem","space-lg":"1.5rem","gutter":"1.5rem","gutter-lg":"2rem","space-xl":"2.5rem","margin":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"headline-lg":["Inter"],"headline-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"tabular-metric":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"display-hero-mobile":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-metric":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest flex-shrink-0"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Tenancy OS</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CivicQuarters</span></div></div><div class="flex-1 px-space-md py-space-md space-y-space-lg"><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="flats-and-buildings" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-body-md text-body-md">Flats &amp; Buildings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="residents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md">Residents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="occupancy-history" href="#"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md">Occupancy History</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="maintenance-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Maintenance Billing</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="payments-and-ledgers" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Payments &amp; Ledgers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="service-tickets" href="#"><span class="material-symbols-outlined text-[20px]">handyman</span><span class="font-body-md text-body-md">Service Tickets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="visitors-and-gate-logs" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Visitors &amp; Gate Logs</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Facilities</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="amenities-and-bookings" href="#"><span class="material-symbols-outlined text-[20px]">pool</span><span class="font-body-md text-body-md">Amenities &amp; Bookings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="parking-allocations" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-body-md text-body-md">Parking Allocations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="staff-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Staff Management</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports-and-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Reports &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-md border-t border-surface-container-high bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant text-label-md"><span class="font-label-md">v2.4.1 Civic Core</span><span class="w-2 h-2 rounded-full bg-primary inline-block"></span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-outline text-[18px]">location_city</span><span class="font-label-md text-label-md text-on-surface font-semibold">Greenwood Crest</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-72"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search units, residents, tickets..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-space-xs rounded-full self-end leading-tight mt-0.5">Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-y-space-xl">
+<!-- Top Navigation & Header Action Deck -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md tracking-wider uppercase">
+<span class="hover:text-primary transition-colors cursor-pointer">Facilities</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">Amenities &amp; Bookings</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Amenities &amp; Bookings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Reserve society facilities, manage clubhouse slots, and prevent booking overlaps.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Download Schedule</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-md hover:bg-primary transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Book Amenity</span>
+</button>
+</div>
+</div>
+<!-- KPI Stat Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Bookings Today</span>
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">14 Confirmed</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Clubhouse, Tennis, Banquet</div>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+18% vs yesterday</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Active Facilities</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">6 Operational</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs line-clamp-1">Banquet, Tennis, Pool, Gym, Courts</div>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>100% capacity ready</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Peak Slot Today</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">schedule</span>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">18:00 – 20:00</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Evening Prime (All Courts booked)</div>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>92% Utilization anticipated</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Maintenance Blackout</span>
+<span class="material-symbols-outlined text-error text-[20px]">build_circle</span>
+</div>
+<div>
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">1 Scheduled</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Pool deep-cleaning on Tuesday</div>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs text-error font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">notifications_active</span>
+<span>12:00 – 14:00 Window</span>
+</div>
+</div>
+</div>
+<!-- Facility Visual Showcase Banner -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<div class="relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm lg:col-span-2 flex flex-col md:flex-row">
+<div class="w-full md:w-5/12 h-48 md:h-auto relative">
+<img class="w-full h-full object-cover" data-alt="High-end luxury society clubhouse banquet interior with double-height ceiling, warm ambient cove lighting, modern Scandinavian furniture and sleek glass doors leading out to landscaped lawns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIQHoUNhzDgJI--kKgqLZfguXSPv0VAx_A9qwdIBuh0YwmHx_1MXWHz3cHbuctqcUwXr5-0xRZoz3ATXkFN4BIp9vjrOu88AoxWbx69FnBAW6VdXwf4eU1OX7q1Svy0YeVbDlfky1cVigvJx2kUmoH4pGcYf0tlsCof5BcerbYbW2cZlvjMvg0mdIrL9cpBaTL3jpF3x7XDXjYvBvGxmXEeoJuBIDBZS4jaP5WslU"/>
+<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed">Prime Venue</span>
+<span class="font-label-sm text-label-sm text-outline">Capacity: 150 Guests</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-space-xs">Clubhouse Grand Banquet Suite</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Soundproof multi-tier audio, caterer staging prep kitchen, central climate zoning, and adjoining garden deck.</p>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">event_seat</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Next open window: Today 18:30+</span>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1">
+            Rules &amp; Pricing <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Amenity Snapshot Card -->
+<div class="relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between p-space-lg">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Facility Snapshot</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Olympic Outdoor Pool</h3>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-tertiary">Temperature: 26°C</span>
+</div>
+<div class="h-28 w-full rounded-lg overflow-hidden my-space-sm relative">
+<img class="w-full h-full object-cover" data-alt="Crystal clear outdoor lap swimming pool flanked by pristine teakwood deck loungers and architectural minimalist concrete pergolas under early morning sun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuftNakZ4pvXV-CzD1BsIIE9XiTlNjPg2J5ppwV-UoOEUSmkYLapVHSmrylCsDmdpxhgnd7PMT2ZLrNRT-MkyEC3WTd2JM0SsZM5GUWGCTlkGRdvSffmBgIMVsIBtQahrneM7kqlrRBQ_sZ1pHs7jUjeamFu1xkkhKVPoTwIsfAIeanwmRR6hpj-3j90zwdv04xfS6_BGjanXnbpBwwuJRiPWlUgWoC1zCx8_2xVc"/>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span>
+<span>Automated pH dosing active</span>
+</div>
+<span class="font-semibold text-on-surface">Lane 1-4 Open</span>
+</div>
+</div>
+</div>
+<!-- Interactive Time-Slot Availability & Calendar Grid -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Filter Bar Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm overflow-x-auto pb-space-xs lg:pb-0 scrollbar-none">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm">All Facilities</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap">Clubhouse Banquet</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap">Tennis Court</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap">Swimming Pool</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap">Badminton Court</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap">Community Gym</button>
+</div>
+<div class="flex items-center gap-space-xs self-end lg:self-auto">
+<div class="flex items-center gap-2 bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<button class="p-1 hover:bg-surface-container-highest rounded text-on-surface"><span class="material-symbols-outlined text-[18px]">chevron_left</span></button>
+<span class="font-label-md text-label-md font-semibold text-on-surface px-space-xs">Today, Oct 24</span>
+<button class="p-1 hover:bg-surface-container-highest rounded text-on-surface"><span class="material-symbols-outlined text-[18px]">chevron_right</span></button>
+</div>
+<button class="h-9 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">view_timeline</span>
+<span>Grid View</span>
+</button>
+</div>
+</div>
+<!-- Timeline Grid Matrix -->
+<div class="w-full overflow-x-auto">
+<div class="min-w-[920px] flex flex-col gap-space-sm">
+<!-- Timeline Hour Headers (06:00 to 22:00) -->
+<div class="grid grid-cols-16 gap-1 text-center font-label-sm text-label-sm text-outline pl-48 pr-2 py-1 bg-surface-container-low rounded-lg">
+<span>06:00</span>
+<span>07:00</span>
+<span>08:00</span>
+<span>09:00</span>
+<span>10:00</span>
+<span>11:00</span>
+<span>12:00</span>
+<span>13:00</span>
+<span>14:00</span>
+<span>15:00</span>
+<span>16:00</span>
+<span>17:00</span>
+<span>18:00</span>
+<span>19:00</span>
+<span>20:00</span>
+<span>21:00</span>
+</div>
+<!-- Row 1: Clubhouse Banquet -->
+<div class="flex items-center gap-space-sm h-14 bg-surface rounded-lg p-space-xs shadow-sm">
+<div class="w-44 flex-shrink-0 flex items-center gap-space-xs pl-2">
+<span class="material-symbols-outlined text-[18px] text-primary">corporate_fare</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Banquet Hall</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Block B Terrace</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-16 gap-1 h-full items-center relative">
+<!-- 06:00 to 14:00: Open Morning -->
+<div class="col-span-8 h-9 rounded bg-surface-container-low text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm text-outline">
+              Morning Available
+            </div>
+<!-- 14:00 to 18:00: Booked Flat C-301 -->
+<div class="col-span-4 h-9 rounded bg-primary-container text-on-primary flex items-center justify-between px-space-xs font-label-sm text-label-sm shadow-sm cursor-pointer hover:bg-primary transition-all">
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[14px]">cake</span>
+<span class="truncate font-semibold">Flat C-301 (Birthday)</span>
+</div>
+<span class="text-[10px] bg-on-primary/20 px-1 py-0.5 rounded">4h</span>
+</div>
+<!-- 18:00 to 22:00: Evening Available -->
+<div class="col-span-4 h-9 rounded bg-surface-container-low text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm text-outline">
+              Evening Slot Open
+            </div>
+</div>
+</div>
+<!-- Row 2: Tennis Court -->
+<div class="flex items-center gap-space-sm h-14 bg-surface rounded-lg p-space-xs shadow-sm">
+<div class="w-44 flex-shrink-0 flex items-center gap-space-xs pl-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">sports_tennis</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Tennis Court #1</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Synthetic Turf</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-16 gap-1 h-full items-center relative">
+<!-- 06:00 to 07:00 Open -->
+<div class="col-span-1 h-9 rounded bg-surface-container-low flex items-center justify-center text-[10px] text-outline">Open</div>
+<!-- 07:00 to 08:30 (approx 2 cols) -->
+<div class="col-span-2 h-9 rounded bg-secondary text-on-secondary flex items-center px-space-xs font-label-sm text-label-sm justify-between shadow-sm">
+<span class="truncate font-semibold">Flat A-204</span>
+<span class="text-[10px] opacity-80">1.5h</span>
+</div>
+<!-- 09:00 to 17:00 Open slots -->
+<div class="col-span-8 h-9 rounded bg-surface-container-low flex items-center justify-center font-label-sm text-label-sm text-outline">
+              Open Booking Window
+            </div>
+<!-- 17:00 to 18:30 -->
+<div class="col-span-2 h-9 rounded bg-secondary text-on-secondary flex items-center px-space-xs font-label-sm text-label-sm justify-between shadow-sm">
+<span class="truncate font-semibold">Flat D-102</span>
+<span class="text-[10px] opacity-80">1.5h</span>
+</div>
+<!-- 19:00 to 22:00 Open Evening -->
+<div class="col-span-3 h-9 rounded bg-surface-container-low flex items-center justify-center font-label-sm text-label-sm text-outline">
+              Open
+            </div>
+</div>
+</div>
+<!-- Row 3: Swimming Pool -->
+<div class="flex items-center gap-space-sm h-14 bg-surface rounded-lg p-space-xs shadow-sm">
+<div class="w-44 flex-shrink-0 flex items-center gap-space-xs pl-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">pool</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Olympic Pool</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Heated / 50m</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-16 gap-1 h-full items-center relative">
+<!-- 06:00 to 12:00 General Access -->
+<div class="col-span-6 h-9 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-medium">
+              Free Swim &amp; Lap Sessions
+            </div>
+<!-- 12:00 to 14:00 Cleaning Blackout -->
+<div class="col-span-2 h-9 rounded bg-error-container text-on-error-container flex items-center justify-center font-label-sm text-label-sm font-semibold gap-1">
+<span class="material-symbols-outlined text-[14px]">cleaning_services</span>
+<span>Sanitization</span>
+</div>
+<!-- 14:00 to 22:00 Resident Open -->
+<div class="col-span-8 h-9 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-medium">
+              Free Swim / Resident Access
+            </div>
+</div>
+</div>
+<!-- Row 4: Badminton Court -->
+<div class="flex items-center gap-space-sm h-14 bg-surface rounded-lg p-space-xs shadow-sm">
+<div class="w-44 flex-shrink-0 flex items-center gap-space-xs pl-2">
+<span class="material-symbols-outlined text-[18px] text-primary">sports_tennis</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Badminton Indoor</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Court A (Wood)</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-16 gap-1 h-full items-center relative">
+<!-- 06:00 to 18:00 Standard usage / sporadic slots -->
+<div class="col-span-12 h-9 rounded bg-surface-container-low flex items-center justify-center font-label-sm text-label-sm text-outline">
+              Standard Resident Hourly Booking
+            </div>
+<!-- 18:00 to 21:00 Peak Slot Highlighted -->
+<div class="col-span-3 h-9 rounded bg-tertiary-container text-on-tertiary flex items-center justify-between px-space-xs font-label-sm text-label-sm shadow-sm">
+<span class="font-semibold truncate">Peak Prime (Booked)</span>
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+</div>
+<!-- 21:00 to 22:00 Open -->
+<div class="col-span-1 h-9 rounded bg-surface-container-low flex items-center justify-center text-[10px] text-outline">Open</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Legend Indicators -->
+<div class="flex flex-wrap items-center justify-between pt-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-surface-container-low inline-block"></span>
+<span>Available / Free Access</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary-container inline-block"></span>
+<span>Confirmed Resident Reservation</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-tertiary-container inline-block"></span>
+<span>Peak Time Slot</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-error-container inline-block"></span>
+<span>Maintenance Window</span>
+</div>
+</div>
+<span class="text-outline">Slots automatically update every 5 minutes</span>
+</div>
+</div>
+<!-- Upcoming Bookings Table Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Toolbar -->
+<div class="p-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Upcoming Scheduled Bookings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active reservations across all residential zones and clubhouse facilities.</p>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant flex-1 sm:w-64">
+<span class="material-symbols-outlined text-[16px] text-outline">search</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-outline" placeholder="Search flat, booking ID or name..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md font-semibold">Booking ID</th>
+<th class="py-space-sm px-space-md font-semibold">Facility</th>
+<th class="py-space-sm px-space-md font-semibold">Resident &amp; Unit</th>
+<th class="py-space-sm px-space-md font-semibold">Date &amp; Time Window</th>
+<th class="py-space-sm px-space-md font-semibold">Guests</th>
+<th class="py-space-sm px-space-md font-semibold">Status</th>
+<th class="py-space-sm px-space-md font-semibold">Fee / Deposit</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-primary">#BK-1042</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">corporate_fare</span>
+<span class="font-medium text-on-surface">Clubhouse Banquet</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Rajesh Malhotra</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Flat C-301 · Owner</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Today, 24 Oct</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">14:00 – 18:00 (4h)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-tabular-metric text-on-surface">45 Pax</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed">
+                Confirmed
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">$120.00</span>
+<span class="text-on-surface-variant text-[11px]">$200 Deposit Hold</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+                  View Pass
+                </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-primary">#BK-1043</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">sports_tennis</span>
+<span class="font-medium text-on-surface">Tennis Court #1</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Sarah Jenkins</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Flat A-204 · Tenant</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Today, 24 Oct</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">07:00 – 08:30 (1.5h)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-tabular-metric text-on-surface">2 Pax</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface">
+                Completed
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Free (Inclusive)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+                  View Pass
+                </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-primary">#BK-1044</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">sports_tennis</span>
+<span class="font-medium text-on-surface">Tennis Court #1</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Kavita Verma</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Flat D-102 · Owner</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Today, 24 Oct</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">17:00 – 18:30 (1.5h)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-tabular-metric text-on-surface">4 Pax</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed">
+                Confirmed
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Free (Inclusive)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+                  View Pass
+                </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-primary">#BK-1045</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">sports_tennis</span>
+<span class="font-medium text-on-surface">Badminton Court A</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Marcus Vance</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Flat B-402 · Resident</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Today, 24 Oct</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">18:00 – 19:30 (1.5h)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-tabular-metric text-on-surface">2 Pax</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed">
+                Confirmed
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">$15.00 (Lighting)</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+                  View Pass
+                </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-outline">#BK-1039</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">fitness_center</span>
+<span class="font-medium text-on-surface-variant">Community Gym (PT)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Liam Davies</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Flat A-101 · Owner</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface-variant">Tomorrow, 25 Oct</span>
+<span class="text-outline font-label-sm text-label-sm">06:00 – 07:00 (1h)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-tabular-metric text-on-surface-variant">1 Pax</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container">
+                Cancelled
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface-variant">Refunded</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">
+                  Details
+                </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Counter -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant">
+<span>Showing 5 of 14 bookings today</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface disabled:opacity-50" disabled="">Previous</button>
+<span class="px-space-sm font-semibold text-on-surface">Page 1 of 3</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

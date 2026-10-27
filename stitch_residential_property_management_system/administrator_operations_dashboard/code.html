@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#00174b", "on-primary": "#ffffff", "tertiary-container": "#00174b", "surface-tint": "#565e74", "outline": "#76777d", "surface-dim": "#cbdbf5", "on-tertiary-fixed-variant": "#003ea8", "on-secondary-container": "#57657b", "on-secondary-fixed-variant": "#3a485c", "surface": "#f8f9ff", "background": "#f8f9ff", "error-container": "#ffdad6", "surface-container-highest": "#d3e4fe", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "secondary-container": "#d5e3fd", "on-background": "#0b1c30", "inverse-primary": "#bec6e0", "secondary-fixed-dim": "#b9c7e0", "on-tertiary-container": "#497cff", "surface-container-lowest": "#ffffff", "on-primary-container": "#7c839b", "inverse-surface": "#213145", "on-primary-fixed-variant": "#3f465c", "secondary": "#515f74", "tertiary": "#000000", "secondary-fixed": "#d5e3fd", "on-error": "#ffffff", "on-secondary-fixed": "#0d1c2f", "primary-fixed-dim": "#bec6e0", "on-secondary": "#ffffff", "on-surface": "#0b1c30", "on-primary-fixed": "#131b2e", "surface-variant": "#d3e4fe", "primary-container": "#131b2e", "primary": "#000000", "surface-container-low": "#eff4ff", "surface-container-high": "#dce9ff", "surface-container": "#e5eeff", "error": "#ba1a1a", "tertiary-fixed": "#dbe1ff", "primary-fixed": "#dae2fd", "tertiary-fixed-dim": "#b4c5ff", "inverse-on-surface": "#eaf1ff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "margin-compact": "1rem", "space-lg": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "gutter-compact": "0.5rem", "space-md": "0.75rem", "margin": "1.5rem", "gutter": "1rem" }, "fontFamily": { "headline-xl": [ "Inter" ], "body-md": [ "Inter" ], "headline-md": [ "Inter" ], "headline-sm": [ "Inter" ], "data-mono": [ "Inter" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg": [ "Inter" ] }, "fontSize": { "headline-xl": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "data-mono": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.025em", "fontWeight": "600" } ], "headline-lg": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-primary-container z-50 flex flex-col justify-between select-none shadow-none"><div class="flex flex-col h-full overflow-hidden"><div class="h-14 px-space-lg flex items-center justify-between bg-primary-container"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight leading-none">CivicQuarters</span><span class="font-label-sm text-label-sm text-on-primary-container text-[10px] uppercase tracking-wider leading-none mt-1">ACID Relational ERP</span></div></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high/20 text-on-primary-container text-[9px] font-semibold border border-outline-variant/30">v2.4</span></div><div class="px-space-md py-space-xs bg-inverse-surface/40 flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span><span class="font-data-mono text-data-mono text-[11px] text-primary-fixed">DBMS: MySQL 8.0</span></div><span class="font-label-sm text-label-sm text-[10px] text-surface-variant font-mono uppercase">3NF Strict</span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-sm space-y-space-md" data-active-classes="bg-inverse-surface text-on-primary font-semibold rounded-lg shadow-none"><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">Main</div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-1.5 transition-colors bg-inverse-surface text-on-primary font-semibold rounded-lg shadow-none" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="flats-buildings" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span>Flats &amp; Buildings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="residents" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span>Residents</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="occupancy-history" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span>Occupancy History (3NF)</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">Operations &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="maintenance-billing" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Maintenance Billing</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="payments-ledgers" href="#"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span>Payments &amp; Ledgers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="service-tickets" href="#"><span class="material-symbols-outlined text-[18px]">confirmation_number</span><span>Service Tickets (SLA)</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="visitors-gate-logs" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Visitors &amp; Gate Logs</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">Facilities</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="amenities-bookings" href="#"><span class="material-symbols-outlined text-[18px]">pool</span><span>Amenities &amp; Bookings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="parking-allocations" href="#"><span class="material-symbols-outlined text-[18px]">local_parking</span><span>Parking Allocations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="staff-management" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Staff Management</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px]">System &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="reports-audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Reports &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="project-overview" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span>Project Overview (SRM)</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg font-body-md text-body-md text-primary-fixed-dim hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></div></nav></div><div class="p-space-sm bg-primary-container"><div class="p-space-sm rounded-lg bg-inverse-surface/60 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold">SA</div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-primary font-semibold truncate leading-none">SRM Admin Node</span><span class="font-label-sm text-label-sm text-on-primary-container text-[10px] leading-none mt-1">Super Admin</span></div></div><span class="material-symbols-outlined text-primary-fixed text-[18px]">verified_user</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="CivicQuarters Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VV2LOS3tFQhz6uP6OEGTx7mqvOYaZf2rL-geIcITH-er87n_i_40WbE171rKKJkvi0HNQnq984EZNVbhcn5D_YcG4WpM75b9BmcYtUvJ8lWSEkrPBe_DPyx5RRAtV-8oF3xsqA3rmx4-8vgT1FiG-yppkvKbjiGwyYUvrW6IyV1sW-scrMGj79nCeI7kBnNL7oanxJp1Eel2HlAw7wVOWNOJejAjZHm6jDJ5710ZL226Moj2F7jvblMwc"/><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">location_city</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Greenwood Crest Residency - Block A to D</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-secondary-container"><span class="w-1.5 h-1.5 rounded-full bg-on-secondary-fixed-variant"></span><span class="font-label-sm text-label-sm text-[11px] font-medium">DB: MySQL 8.0 / 3NF Synced</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-64 justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm">Universal Search...</span></div><kbd class="font-data-mono text-data-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">⌘K</kbd></div><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></div><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-inverse-surface hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>New Entry</span></button><div class="flex items-center gap-2 pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Super Administrator</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[10px] leading-tight">ACID Commits (RW)</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant hidden lg:block">unfold_more</span></div></div></div></header><main class="w-full pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-md bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">Administrative Operations &amp; Real-Time Metrics</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-secondary-container font-data-mono text-[11px] font-semibold">3NF_LIVE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Relational schema overview across Blocks A–D (240 total units). Database integrity: ACID Compliant, 0 transaction rollbacks.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-low rounded-lg px-2.5 py-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary mr-1.5">calendar_month</span>
+<span class="font-label-sm text-label-sm font-medium">Last 30 Days (Oct 1 – Oct 31)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-1">arrow_drop_down</span>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Export Reports</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary hover:bg-inverse-surface text-on-primary font-label-sm text-label-sm font-semibold transition-colors" id="billingTriggerBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Run Automated Billing Trigger</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-space-lg space-y-space-md">
+<!-- Row 1: 6 Top KPI Metrics -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Units</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-container text-on-secondary-container font-semibold">82.5% Occ</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">240 Flats</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center gap-1">
+<span class="font-semibold text-on-surface">198</span> Occupied · <span class="font-semibold text-on-surface">42</span> Vacant · 0 Maint
+          </p>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-3 overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 82.5%;"></div>
+<div class="bg-secondary-fixed-dim h-full" style="width: 17.5%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active Population</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">groups</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">614 Residents</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-on-surface">422</span> Owners · <span class="font-semibold text-on-surface">192</span> Tenants
+          </p>
+</div>
+<div class="mt-3 font-data-mono text-[11px] text-on-secondary-container bg-surface-container-low px-2 py-0.5 rounded">
+          Density: 3.10 pers/unit
+        </div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Monthly Collection</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-secondary-fixed text-on-secondary-fixed font-bold">+4.2% MoM</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">₹11,85,500</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            of ₹14,40,000 Total Invoiced
+          </p>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Recovery Ratio:</span>
+<span class="font-bold text-on-surface font-data-mono">82.3% Realized</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Outstanding Dues</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-error-container text-on-error-container font-semibold">28 Flats</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg text-headline-lg text-error font-bold tracking-tight">₹2,54,500</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            12 flats in 60+ days SLA penalty
+          </p>
+</div>
+<div class="mt-3 flex items-center gap-1 font-label-sm text-[11px] text-error font-medium">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Demands issued: 9 Units</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Service Tickets</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-error-container text-on-error-container font-bold">2 Critical</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">9 Active</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            4 In-Progress · 3 Assigned
+          </p>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">SLA Adherence:</span>
+<span class="font-data-mono font-bold text-on-surface">94.8%</span>
+</div>
+</div>
+<!-- KPI 6 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Gate Traffic (Today)</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+<div class="mt-2">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">142 Logged</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-on-surface">24</span> On-Premise · 118 Exited
+          </p>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Security Denials:</span>
+<span class="font-bold text-error">2 Flags</span>
+</div>
+</div>
+</div>
+<!-- Row 2: 2:1 Main Operations Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- LEFT COLUMN (2 Cols Span) -->
+<div class="lg:col-span-2 space-y-space-md">
+<!-- Block-Level Occupancy Matrix -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">apartment</span>
+<span class="font-headline-md text-headline-md text-on-surface">Block-wise Allocation &amp; Occupancy Partition</span>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">TABLE: `tbl_unit_ledger`</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-sm">
+<!-- Block A -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Block A (Oak)</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold">60 Units</span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-data-mono text-headline-md text-on-surface font-bold">52 <span class="font-body-sm text-on-surface-variant font-normal">/ 60</span></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">86.6%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 86.6%;"></div>
+</div>
+</div>
+<div class="mt-3 pt-2 text-[11px] font-body-sm flex justify-between text-on-surface-variant">
+<span>Dues: ₹36,000</span>
+<span class="font-semibold text-on-surface font-data-mono">4 Defaulters</span>
+</div>
+</div>
+<!-- Block B -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Block B (Cedar)</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold">60 Units</span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-data-mono text-headline-md text-on-surface font-bold">48 <span class="font-body-sm text-on-surface-variant font-normal">/ 60</span></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">80.0%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 80.0%;"></div>
+</div>
+</div>
+<div class="mt-3 pt-2 text-[11px] font-body-sm flex justify-between text-on-surface-variant">
+<span>Dues: ₹72,500</span>
+<span class="font-semibold text-on-surface font-data-mono">8 Defaulters</span>
+</div>
+</div>
+<!-- Block C -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Block C (Pine)</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold">60 Units</span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-data-mono text-headline-md text-on-surface font-bold">54 <span class="font-body-sm text-on-surface-variant font-normal">/ 60</span></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">90.0%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 90.0%;"></div>
+</div>
+</div>
+<div class="mt-3 pt-2 text-[11px] font-body-sm flex justify-between text-on-surface-variant">
+<span>Dues: ₹48,000</span>
+<span class="font-semibold text-on-surface font-data-mono">5 Defaulters</span>
+</div>
+</div>
+<!-- Block D -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Block D (Maple)</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold">60 Units</span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-data-mono text-headline-md text-on-surface font-bold">44 <span class="font-body-sm text-on-surface-variant font-normal">/ 60</span></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">73.3%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 73.3%;"></div>
+</div>
+</div>
+<div class="mt-3 pt-2 text-[11px] font-body-sm flex justify-between text-on-surface-variant">
+<span>Dues: ₹98,000</span>
+<span class="font-semibold text-error font-data-mono">11 Defaulters</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Maintenance Billing Ledger Trend & Comparative Stats -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 gap-2">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface">Maintenance Billing vs. Inflows (FY 2024-Q3)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Computed using flat sq.ft formula ₹3.50/sq.ft + sinking fund reserves</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span>Billed Invoiced</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-3 rounded bg-secondary-fixed-dim"></span>
+<span>Actual Cleared</span>
+</div>
+</div>
+</div>
+<!-- Comparative SVG Chart & Metrics Container -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-space-md pt-2">
+<div class="lg:col-span-3">
+<div class="h-44 w-full flex items-end justify-between gap-4 px-2 pt-4 bg-surface-container-low rounded-lg">
+<!-- Jul -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full max-w-[48px] flex items-end justify-center gap-1 h-32">
+<div class="w-1/2 bg-primary rounded-t" style="height: 85%;"></div>
+<div class="w-1/2 bg-secondary-fixed-dim rounded-t" style="height: 74%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">JUL</span>
+<span class="font-data-mono text-[10px] text-on-surface font-semibold">₹11.2L</span>
+</div>
+<!-- Aug -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full max-w-[48px] flex items-end justify-center gap-1 h-32">
+<div class="w-1/2 bg-primary rounded-t" style="height: 88%;"></div>
+<div class="w-1/2 bg-secondary-fixed-dim rounded-t" style="height: 78%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">AUG</span>
+<span class="font-data-mono text-[10px] text-on-surface font-semibold">₹11.8L</span>
+</div>
+<!-- Sep -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full max-w-[48px] flex items-end justify-center gap-1 h-32">
+<div class="w-1/2 bg-primary rounded-t" style="height: 92%;"></div>
+<div class="w-1/2 bg-secondary-fixed-dim rounded-t" style="height: 84%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">SEP</span>
+<span class="font-data-mono text-[10px] text-on-surface font-semibold">₹12.4L</span>
+</div>
+<!-- Oct (Current) -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full max-w-[48px] flex items-end justify-center gap-1 h-32">
+<div class="w-1/2 bg-primary rounded-t" style="height: 98%;"></div>
+<div class="w-1/2 bg-secondary-fixed-dim rounded-t" style="height: 82%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface font-bold">OCT (Live)</span>
+<span class="font-data-mono text-[10px] text-on-surface font-semibold">₹11.85L</span>
+</div>
+</div>
+</div>
+<!-- Side audit breakdown -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cycle Metrics</span>
+<div class="mt-2 space-y-2">
+<div class="flex justify-between items-center text-[12px]">
+<span class="text-on-surface-variant">Base Rate:</span>
+<span class="font-data-mono font-semibold text-on-surface">₹6,000 / flat</span>
+</div>
+<div class="flex justify-between items-center text-[12px]">
+<span class="text-on-surface-variant">Utility Surcharges:</span>
+<span class="font-data-mono font-semibold text-on-surface">₹1,44,000</span>
+</div>
+<div class="flex justify-between items-center text-[12px]">
+<span class="text-on-surface-variant">Late Fines Run:</span>
+<span class="font-data-mono font-semibold text-on-surface">₹32,500</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-[11px] text-on-secondary-container">
+<span class="font-semibold text-on-surface">Trigger Status:</span> Next recurring cycle schedule on 1st Nov 00:00:01 AM IST.
+              </div>
+</div>
+</div>
+</div>
+<!-- Live Defaulter Quick-Alert Table -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+<div class="p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">notification_important</span>
+<span class="font-headline-md text-headline-md text-on-surface">Active Defaulters &amp; Penalties Ledger</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Dynamic fine computation engine: ₹50/day compounded after the 10th day grace period.
+              </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing top critical</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                View All (28)
+              </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] uppercase tracking-wider">
+<th class="py-2.5 px-3">Unit</th>
+<th class="py-2.5 px-3">Resident &amp; Contact</th>
+<th class="py-2.5 px-3">Tenancy</th>
+<th class="py-2.5 px-3 text-center">Overdue</th>
+<th class="py-2.5 px-3 text-right">Base Due</th>
+<th class="py-2.5 px-3 text-right">Late Fine</th>
+<th class="py-2.5 px-3 text-right">Payable</th>
+<th class="py-2.5 px-3 text-center">Audit Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Defaulter 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-3 font-data-mono font-bold text-on-surface text-[13px]">D-401</td>
+<td class="py-2.5 px-3">
+<div class="font-headline-sm text-headline-sm text-on-surface leading-tight">Vikram Singhania</div>
+<div class="font-data-mono text-[11px] text-on-surface-variant">+91 98201 44210</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-semibold">Owner</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded font-data-mono text-[11px] bg-error-container text-on-error-container font-bold">3 Months</span>
+</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-on-surface text-[13px]">₹18,000</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-error text-[13px]">₹3,150</td>
+<td class="py-2.5 px-3 text-right font-data-mono font-bold text-error text-[13px]">₹21,150</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-[11px] transition-colors" type="button">
+                        Notice
+                      </button>
+<button class="px-2 py-1 rounded bg-primary hover:bg-inverse-surface text-on-primary font-label-sm text-[11px] transition-colors" type="button">
+                        Settle
+                      </button>
+</div>
+</td>
+</tr>
+<!-- Defaulter 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-3 font-data-mono font-bold text-on-surface text-[13px]">B-204</td>
+<td class="py-2.5 px-3">
+<div class="font-headline-sm text-headline-sm text-on-surface leading-tight">Sunil K. Varma</div>
+<div class="font-data-mono text-[11px] text-on-surface-variant">+91 97112 00892</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-secondary-container text-on-secondary-container font-semibold">Tenant</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded font-data-mono text-[11px] bg-error-container text-on-error-container font-bold">2 Months</span>
+</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-on-surface text-[13px]">₹12,000</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-error text-[13px]">₹1,800</td>
+<td class="py-2.5 px-3 text-right font-data-mono font-bold text-error text-[13px]">₹13,800</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-[11px] transition-colors" type="button">
+                        Notice
+                      </button>
+<button class="px-2 py-1 rounded bg-primary hover:bg-inverse-surface text-on-primary font-label-sm text-[11px] transition-colors" type="button">
+                        Settle
+                      </button>
+</div>
+</td>
+</tr>
+<!-- Defaulter 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-3 font-data-mono font-bold text-on-surface text-[13px]">A-108</td>
+<td class="py-2.5 px-3">
+<div class="font-headline-sm text-headline-sm text-on-surface leading-tight">Meenakshi Sundaram</div>
+<div class="font-data-mono text-[11px] text-on-surface-variant">+91 94441 23098</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-semibold">Owner</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded font-data-mono text-[11px] bg-surface-container-highest text-on-surface font-bold">1 Month</span>
+</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-on-surface text-[13px]">₹6,000</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-error text-[13px]">₹850</td>
+<td class="py-2.5 px-3 text-right font-data-mono font-bold text-error text-[13px]">₹6,850</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-[11px] transition-colors" type="button">
+                        Notice
+                      </button>
+<button class="px-2 py-1 rounded bg-primary hover:bg-inverse-surface text-on-primary font-label-sm text-[11px] transition-colors" type="button">
+                        Settle
+                      </button>
+</div>
+</td>
+</tr>
+<!-- Defaulter 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-3 font-data-mono font-bold text-on-surface text-[13px]">C-506</td>
+<td class="py-2.5 px-3">
+<div class="font-headline-sm text-headline-sm text-on-surface leading-tight">Kavita Narang</div>
+<div class="font-data-mono text-[11px] text-on-surface-variant">+91 98110 55431</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-semibold">Owner</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded font-data-mono text-[11px] bg-error-container text-on-error-container font-bold">2 Months</span>
+</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-on-surface text-[13px]">₹12,000</td>
+<td class="py-2.5 px-3 text-right font-data-mono text-error text-[13px]">₹1,750</td>
+<td class="py-2.5 px-3 text-right font-data-mono font-bold text-error text-[13px]">₹13,750</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-[11px] transition-colors" type="button">
+                        Notice
+                      </button>
+<button class="px-2 py-1 rounded bg-primary hover:bg-inverse-surface text-on-primary font-label-sm text-[11px] transition-colors" type="button">
+                        Settle
+                      </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm bg-surface-container-low text-right">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Default penalty trigger calculated daily at 23:59:00 IST via cron job <span class="font-data-mono text-[11px]">sp_apply_overdue_penalty()</span></span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (1 Col Span) -->
+<div class="space-y-space-md">
+<!-- SLA Turnaround & Service Complaints -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-error">fmd_bad</span>
+<span class="font-headline-md text-headline-md text-on-surface">Service Ticket SLA Queue</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-data-mono text-[10px] font-bold">3 High Priority</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Ticket 1: Critical -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">TK-8942 · Unit C-402</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-error-container text-on-error-container font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span>42m SLA LEFT</span>
+</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Critical Main Line Plumbing Leak</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant text-[11px]">
+<span>Assigned: <strong class="text-on-surface font-medium">Rajesh K. (Plumbing)</strong></span>
+<span class="font-data-mono">T+02:18h</span>
+</div>
+</div>
+<!-- Ticket 2: Amber -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">TK-8938 · Block B Lift #2</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-secondary-fixed text-on-secondary-fixed font-bold">
+                  IN-PROGRESS
+                </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Sensor Alignment &amp; Door Jam</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant text-[11px]">
+<span>Assigned: <strong class="text-on-surface font-medium">Otis OEM Support</strong></span>
+<span class="font-data-mono text-on-surface">SLA: 03h 15m</span>
+</div>
+</div>
+<!-- Ticket 3: Electrical -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">TK-8935 · Unit A-105</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-bold">
+                  ASSIGNED
+                </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Trip on Phase 3 Electrical DB Fuse</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant text-[11px]">
+<span>Assigned: <strong class="text-on-surface font-medium">Murugan S.</strong></span>
+<span class="font-data-mono text-on-surface">SLA: 04h 40m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Gate Real-Time Stream -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">security</span>
+<span class="font-headline-md text-headline-md text-on-surface">Gate Logs Stream</span>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">Gate #1 &amp; #2 Sync</span>
+</div>
+<div class="space-y-2">
+<!-- Stream Item 1 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Alok Verma</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">(Guest)</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Dest: <strong class="text-on-surface">B-302</strong></span>
+<span>·</span>
+<span class="font-data-mono">MH-02-CB-4491</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-primary text-on-primary font-bold">ACTIVE INSIDE</span>
+<div class="font-data-mono text-[10px] text-on-surface-variant mt-0.5">14:22:10</div>
+</div>
+</div>
+<!-- Stream Item 2 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Swiggy Delivery</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">(Service)</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Dest: <strong class="text-on-surface">A-404</strong></span>
+<span>·</span>
+<span class="font-data-mono">KA-05-EL-1029</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-primary text-on-primary font-bold">ACTIVE INSIDE</span>
+<div class="font-data-mono text-[10px] text-on-surface-variant mt-0.5">14:15:45</div>
+</div>
+</div>
+<!-- Stream Item 3 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Amazon Logistics</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">(Courier)</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Dest: <strong class="text-on-surface">C-101</strong></span>
+<span>·</span>
+<span class="font-data-mono">Van Entry</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-semibold">EXITED</span>
+<div class="font-data-mono text-[10px] text-on-surface-variant mt-0.5">14:04:12</div>
+</div>
+</div>
+<!-- Stream Item 4 -->
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dr. Anita Roy</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">(Medical)</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Dest: <strong class="text-on-surface">D-203</strong></span>
+<span>·</span>
+<span class="font-data-mono">MH-04-AX-8910</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-semibold">EXITED</span>
+<div class="font-data-mono text-[10px] text-on-surface-variant mt-0.5">13:48:30</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Facility Booking Schedule Today -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">event_seat</span>
+<span class="font-headline-md text-headline-md text-on-surface">Facility Bookings (Today)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lock Table: OK</span>
+</div>
+<div class="space-y-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Clubhouse Grand Hall</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Resident: <strong class="text-on-surface">K. R. Nambiar (B-501)</strong></div>
+<div class="font-label-sm text-[11px] text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>18:00 – 22:00 IST (Private Gathering)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-bold">RESERVED</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Tennis Court Slot A</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Resident: <strong class="text-on-surface">S. Banerjee (A-304)</strong></div>
+<div class="font-label-sm text-[11px] text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>17:00 – 18:00 IST</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface font-bold">RESERVED</span>
+</div>
+</div>
+</div>
+<!-- Database Engine Health & Audit Box -->
+<div class="bg-inverse-surface text-on-primary rounded-lg p-space-md shadow-sm space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">database</span>
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold">RDBMS System Integrity</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-primary-fixed font-data-mono text-[10px] font-bold">3NF NORMALIZED</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 font-data-mono text-[11px]">
+<div class="bg-inverse-surface/60 p-2 rounded">
+<span class="text-on-primary-container block text-[10px] uppercase">Engine</span>
+<span class="text-on-primary font-semibold">MySQL 8.0.34 InnoDB</span>
+</div>
+<div class="bg-inverse-surface/60 p-2 rounded">
+<span class="text-on-primary-container block text-[10px] uppercase">Buffer Pool Hit</span>
+<span class="text-primary-fixed font-semibold">99.8% Cached</span>
+</div>
+<div class="bg-inverse-surface/60 p-2 rounded">
+<span class="text-on-primary-container block text-[10px] uppercase">Active Triggers</span>
+<span class="text-on-primary font-semibold">4 Enforced</span>
+</div>
+<div class="bg-inverse-surface/60 p-2 rounded">
+<span class="text-on-primary-container block text-[10px] uppercase">Snapshot Sync</span>
+<span class="text-on-primary font-semibold">Today, 04:00 AM IST</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-[11px] font-data-mono text-on-primary-container">
+<span>Triggers: LateFee_Calc, Vacancy_Audit, Gate_Sync, Slot_Lock</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const billingBtn = document.getElementById('billingTriggerBtn');
+    if (billingBtn) {
+      billingBtn.addEventListener('click', function() {
+        const originalText = billingBtn.innerHTML;
+        billingBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Executing Triggers...</span>';
+        billingBtn.classList.add('opacity-75');
+        
+        setTimeout(() => {
+          billingBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Triggers Applied (240 Units)</span>';
+          setTimeout(() => {
+            billingBtn.innerHTML = originalText;
+            billingBtn.classList.remove('opacity-75');
+          }, 2400);
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

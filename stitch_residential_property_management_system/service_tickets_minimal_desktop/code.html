@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#dae2fd","surface-dim":"#d2d9f4","on-surface":"#131b2e","tertiary-container":"#00577e","on-primary-fixed":"#100069","tertiary":"#003f5c","inverse-on-surface":"#eef0ff","tertiary-fixed":"#c9e6ff","on-surface-variant":"#464554","outline":"#777586","inverse-surface":"#283044","outline-variant":"#c7c4d7","error":"#ba1a1a","secondary-fixed-dim":"#b9c7e0","on-secondary":"#ffffff","surface-container-high":"#e2e7ff","surface-container":"#eaedff","on-tertiary":"#ffffff","primary-fixed-dim":"#c3c0ff","primary":"#2a14b4","on-secondary-container":"#57657b","on-secondary-fixed-variant":"#3a485c","on-tertiary-container":"#84cdff","inverse-primary":"#c3c0ff","primary-fixed":"#e3dfff","surface-variant":"#dae2fd","on-background":"#131b2e","on-secondary-fixed":"#0d1c2f","surface-container-low":"#f2f3ff","tertiary-fixed-dim":"#89ceff","on-error-container":"#93000a","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface":"#faf8ff","surface-tint":"#5148d7","on-tertiary-fixed":"#001e2f","on-primary-fixed-variant":"#372abf","on-tertiary-fixed-variant":"#004c6e","background":"#faf8ff","primary-container":"#4338ca","surface-bright":"#faf8ff","on-error":"#ffffff","on-primary-container":"#c1beff","secondary":"#515f74","on-primary":"#ffffff","secondary-container":"#d5e3fd","secondary-fixed":"#d5e3fd"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","margin-lg":"3rem","gutter-sm":"1rem","space-lg":"1.5rem","gutter":"1.5rem","gutter-lg":"2rem","space-xl":"2.5rem","margin":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"headline-lg":["Inter"],"headline-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"tabular-metric":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"display-hero-mobile":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-metric":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest flex-shrink-0"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Tenancy OS</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CivicQuarters</span></div></div><div class="flex-1 px-space-md py-space-md space-y-space-lg"><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="flats-and-buildings" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-body-md text-body-md">Flats &amp; Buildings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="residents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md">Residents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="occupancy-history" href="#"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md">Occupancy History</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="maintenance-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Maintenance Billing</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="payments-and-ledgers" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Payments &amp; Ledgers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="service-tickets" href="#"><span class="material-symbols-outlined text-[20px]">handyman</span><span class="font-body-md text-body-md">Service Tickets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="visitors-and-gate-logs" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Visitors &amp; Gate Logs</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Facilities</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="amenities-and-bookings" href="#"><span class="material-symbols-outlined text-[20px]">pool</span><span class="font-body-md text-body-md">Amenities &amp; Bookings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="parking-allocations" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-body-md text-body-md">Parking Allocations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="staff-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Staff Management</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary-container text-on-surface font-semibold"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports-and-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Reports &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-md border-t border-surface-container-high bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant text-label-md"><span class="font-label-md">v2.4.1 Civic Core</span><span class="w-2 h-2 rounded-full bg-primary inline-block"></span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-outline text-[18px]">location_city</span><span class="font-label-md text-label-md text-on-surface font-semibold">Greenwood Crest</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-72"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search units, residents, tickets..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-space-xs rounded-full self-end leading-tight mt-0.5">Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Breadcrumb & Header Bar -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Operations &amp; Finance</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Service Tickets</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Service Tickets</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Manage resident complaints, assign technicians, and track SLA turnaround times.
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="h-9 px-space-md bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+<span>Export Log</span>
+</button>
+<button class="h-9 px-space-md bg-primary-container text-on-primary hover:bg-primary rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create Ticket</span>
+</button>
+</div>
+</div>
+<!-- Summary KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Open Tickets</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">9 Active</div>
+<div class="mt-space-xs flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-error"></span>
+<span>2 High Priority</span>
+<span class="text-outline">•</span>
+<span>7 In Progress</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Average SLA Time</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">3.8 Hours</div>
+<div class="mt-space-xs flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-error flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +12m
+          </span>
+<span>vs last week</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Resolved This Month</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">142 Completed</div>
+<div class="mt-space-xs flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-primary font-semibold">98.2%</span>
+<span>SLA compliance</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Pending Dispatch</span>
+<span class="p-1.5 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">person_alert</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-tabular-metric text-tabular-metric text-on-surface tracking-tight">3 Unassigned</div>
+<div class="mt-space-xs flex items-center gap-space-xs font-body-sm text-body-sm text-on-error-container">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+<span>Immediate action required</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter, Search, and Tabs Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<!-- Row: Status Tabs + Quick Search & Selects -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<!-- Tabs -->
+<div class="flex items-center p-1 bg-surface-container-low rounded-lg self-start">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest shadow-sm font-label-md text-label-md font-semibold text-on-surface flex items-center gap-space-xs">
+<span>All Tickets</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[10px] font-bold">9</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg hover:text-on-surface font-label-md text-label-md text-on-surface-variant flex items-center gap-space-xs transition-colors">
+<span>Open</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[10px]">3</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg hover:text-on-surface font-label-md text-label-md text-on-surface-variant flex items-center gap-space-xs transition-colors">
+<span>In Progress</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[10px]">4</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg hover:text-on-surface font-label-md text-label-md text-on-surface-variant flex items-center gap-space-xs transition-colors">
+<span>Resolved</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[10px]">142</span>
+</button>
+</div>
+<!-- Controls Filter Tools -->
+<div class="flex flex-wrap items-center gap-space-sm flex-1 lg:justify-end">
+<!-- Search bar -->
+<div class="flex items-center gap-space-xs px-space-sm h-10 rounded-lg bg-surface-container-low text-on-surface-variant flex-1 max-w-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">search</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search by ticket ID, flat, category..." type="text"/>
+</div>
+<!-- Category Dropdown -->
+<div class="relative inline-block">
+<button class="h-10 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface flex items-center gap-space-xs transition-colors">
+<span class="text-outline">Category:</span>
+<span class="font-medium">All Types</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Priority Dropdown -->
+<div class="relative inline-block">
+<button class="h-10 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface flex items-center gap-space-xs transition-colors">
+<span class="text-outline">Priority:</span>
+<span class="font-medium">All Levels</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</button>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Filter Settings">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Ticket Management Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md font-semibold">Ticket ID</th>
+<th class="py-2.5 px-space-md font-semibold">Flat &amp; Resident</th>
+<th class="py-2.5 px-space-md font-semibold">Category</th>
+<th class="py-2.5 px-space-md font-semibold min-w-[200px]">Issue Description</th>
+<th class="py-2.5 px-space-md font-semibold">Priority</th>
+<th class="py-2.5 px-space-md font-semibold">Assigned Technician</th>
+<th class="py-2.5 px-space-md font-semibold">SLA Status</th>
+<th class="py-2.5 px-space-md font-semibold">Stage</th>
+<th class="py-2.5 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Row 1: #TK-8942 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-md text-label-md font-semibold text-primary">
+              #TK-8942
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Flat C-402</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">K. V. Ramanathan</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+                Plumbing
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Main line riser leakage causing seepage">
+              Main line riser leakage causing seepage
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Critical
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  RK
+                </div>
+<div>
+<span class="font-medium">Rajesh K.</span>
+<span class="text-outline text-[11px] block leading-none">Plumber</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-semibold text-error">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>42m SLA Left</span>
+</div>
+<div class="w-24 bg-surface-container-high rounded-full h-1 mt-1 overflow-hidden">
+<div class="bg-error h-1 rounded-full w-[85%]"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-container text-on-secondary-container">
+                In Progress
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md font-semibold transition-colors">
+                  Details
+                </button>
+<button class="h-8 w-8 flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: #TK-8938 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-md text-label-md font-semibold text-primary">
+              #TK-8938
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Block B Lift #2</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Common Facility</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+                Electrical / Lift
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Sensor alignment &amp; door jam warning">
+              Sensor alignment &amp; door jam warning
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Critical
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  OT
+                </div>
+<div>
+<span class="font-medium">Otis OEM Support</span>
+<span class="text-outline text-[11px] block leading-none">Contract Vendor</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
+<span>Dispatched</span>
+</div>
+<div class="w-24 bg-surface-container-high rounded-full h-1 mt-1 overflow-hidden">
+<div class="bg-tertiary h-1 rounded-full w-[40%]"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface">
+                Assigned
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md font-semibold transition-colors">
+                  Details
+                </button>
+<button class="h-8 w-8 flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: #TK-8935 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-md text-label-md font-semibold text-primary">
+              #TK-8935
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Flat A-105</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Suresh Raina</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+                Electrical
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Trip on phase 3 electrical DB fuse">
+              Trip on phase 3 electrical DB fuse
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-high text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                High
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  MS
+                </div>
+<div>
+<span class="font-medium">Murugan S.</span>
+<span class="text-outline text-[11px] block leading-none">Electrician</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">timelapse</span>
+<span>2h 15m Left</span>
+</div>
+<div class="w-24 bg-surface-container-high rounded-full h-1 mt-1 overflow-hidden">
+<div class="bg-primary-container h-1 rounded-full w-[60%]"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-container text-on-secondary-container">
+                In Progress
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md font-semibold transition-colors">
+                  Details
+                </button>
+<button class="h-8 w-8 flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: #TK-8931 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-md text-label-md font-semibold text-primary">
+              #TK-8931
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Flat D-302</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Pooja Hegde</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+                Carpentry
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Balcony safety latch replacement">
+              Balcony safety latch replacement
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-fixed text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Medium
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<button class="px-space-sm py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+                Assign Staff
+              </button>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span>Within SLA (4h)</span>
+</div>
+<div class="w-24 bg-surface-container-high rounded-full h-1 mt-1 overflow-hidden">
+<div class="bg-secondary h-1 rounded-full w-[15%]"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-highest text-on-surface">
+                Open
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="h-8 px-space-sm bg-primary-container text-on-primary hover:bg-primary rounded-lg font-label-md text-label-md font-semibold transition-colors">
+                  Assign
+                </button>
+<button class="h-8 w-8 flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: #TK-8920 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-md text-label-md font-semibold text-outline">
+              #TK-8920
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Flat B-108</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Vikram Sarabhai</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+                Intercom
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs" title="Static noise on security handset">
+              Static noise on security handset
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Low
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  RT
+                </div>
+<div>
+<span class="font-medium">Ramu T.</span>
+<span class="text-outline text-[11px] block leading-none">Security Technician</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-semibold text-outline">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Resolved today</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface-variant">
+                Resolved
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md font-semibold transition-colors">
+                  Details
+                </button>
+<button class="h-8 w-8 flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Pagination -->
+<div class="flex flex-col sm:flex-row items-center justify-between pt-space-sm gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+        Showing <span class="font-semibold text-on-surface">5</span> of <span class="font-semibold text-on-surface">9</span> active tickets
+      </span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container-low text-outline hover:text-on-surface rounded-lg font-label-md text-label-md font-medium transition-colors disabled:opacity-50" disabled="">
+          Previous
+        </button>
+<button class="h-8 w-8 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center shadow-sm">
+          1
+        </button>
+<button class="h-8 w-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center transition-colors">
+          2
+        </button>
+<button class="h-8 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md font-medium transition-colors">
+          Next
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
